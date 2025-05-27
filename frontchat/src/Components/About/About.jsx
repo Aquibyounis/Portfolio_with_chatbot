@@ -6,7 +6,7 @@ const About = () => {
     <div className="about-container">
       <h2 className="about-title">🤖 About Me</h2>
       <p className="about-text">
-        I’m <strong>[Your Name]</strong> — an AI Engineer on a mission to blur the line between code and cognition.
+        I’m <strong>"Aquib Younis"</strong> — an AI Engineer on a mission to blur the line between code and cognition.
         <br /><br />
         My world revolves around <strong>Machine Learning</strong>, <strong>Deep Learning</strong>, and <strong>Natural Language Processing</strong>. Whether it's training neural networks, fine-tuning transformers, or building LLM-powered agents — I live at the intersection of math, logic, and creativity.
         <br /><br />

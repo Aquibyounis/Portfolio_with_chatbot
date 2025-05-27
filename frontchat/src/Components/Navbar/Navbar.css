@@ -54,3 +54,14 @@
 .ul li:hover{
     transform: translateY(5px);
 }
+
+
+
+
+
+@media (max-width:480px){
+    .navbar{
+        width: 100svw;
+        background-color: aqua;
+    }
+}

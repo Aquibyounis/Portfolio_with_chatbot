@@ -13,6 +13,7 @@ const Links = () => {
             <p>LEETCODE</p>
             <p>TELEGRAM</p>
         </div>
+        <h1 className='side_head'>More</h1>
     </div>
   )
 }

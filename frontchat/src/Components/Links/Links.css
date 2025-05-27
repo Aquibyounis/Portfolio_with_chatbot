@@ -6,7 +6,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #ffffffc9;
+  background-color: #373737c9;
 }
 
 .inner_links {
@@ -14,7 +14,7 @@
   width: 80%;
   color: rgb(4, 197, 210);
   display: grid;
-  grid-template-columns: repeat(3, 2fr);
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
   align-items: center;
   justify-content: center;
   grid-template-rows: repeat(3, 2fr);
@@ -23,11 +23,40 @@
 .inner_links p {
   text-align: center;
   font-size: 2.1em;
-  background: linear-gradient(5deg,rgba(0, 162, 255, 0.827),black);
+  background: linear-gradient(45deg,rgba(0, 162, 255, 0.827),rgb(255, 255, 255));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   font-weight: 800;
   cursor: pointer;
   transition-duration: 2s;
   position: relative;
+  height: 2em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50px;
+}
+.inner_links p:hover{
+  scale: 1.1;
+}
+
+.side_head{
+  color: #ffffff;
+  writing-mode: vertical-rl;
+  font-size: 5em;
+}
+
+
+
+@media (max-width:480px) {
+  .inner_links p{
+    font-size: 1.5em;
+  }
+  .inner_links{
+    display: flex;
+    align-items: self-start;
+    justify-content: center;
+    flex-direction: column;
+    padding-left: 10%;
+  }
 }

@@ -5,6 +5,7 @@ import tri from "../../assets/images.png"
 const Contact = () => {
   return (
     <div className='contact'>
+        <h1 className='contact_side'>Contact</h1>
         <div className="inner_contact">
             <div className="left_contact">
                 <img src={tri} alt="" className='tri_image'/>
