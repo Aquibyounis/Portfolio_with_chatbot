@@ -1,0 +1,56 @@
+.mainbar{
+    background: url("../../assets/cosmic.jpg");
+    height: 100svh;
+    width: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: -10;
+}
+.inner_main{
+    background-blend-mode:luminosity;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.715);
+    height: 100%;
+    width: 100%;
+}
+.middle{
+    height: 70%;
+    width: 50%;
+    color: aliceblue;
+    border-radius: 50px;
+    display: flex;
+    align-items: start;
+    justify-content: center;
+    flex-direction: column;
+    gap: 5%;
+}
+.right{
+    height: 70%;
+    width: 40%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.h1{
+    font-size: 4.5em;
+}
+.ai{
+    background: linear-gradient(90deg,#065cb8c5,rgb(255, 255, 255));
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    font-size: 2em;
+}
+.img_p{
+    height: inherit;
+    clip-path: circle();
+}
+.ai_bot{
+    font-size: 1.2em;
+    color: aliceblue;
+}

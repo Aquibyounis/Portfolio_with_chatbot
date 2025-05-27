@@ -1,0 +1,33 @@
+.links {
+  height: 70svh;
+  width: 100%;
+  margin-bottom: 100px;
+  margin-top: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #ffffffc9;
+}
+
+.inner_links {
+  height: inherit;
+  width: 80%;
+  color: rgb(4, 197, 210);
+  display: grid;
+  grid-template-columns: repeat(3, 2fr);
+  align-items: center;
+  justify-content: center;
+  grid-template-rows: repeat(3, 2fr);
+}
+
+.inner_links p {
+  text-align: center;
+  font-size: 2.1em;
+  background: linear-gradient(5deg,rgba(0, 162, 255, 0.827),black);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 800;
+  cursor: pointer;
+  transition-duration: 2s;
+  position: relative;
+}
