@@ -8,6 +8,7 @@
   box-shadow: 0 0 30px rgba(0, 255, 255, 0.1);
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   transition: transform 0.3s ease;
+  box-sizing: border-box;
 }
 
 .about-container:hover {
@@ -24,6 +25,7 @@
 .about-text {
   font-size: 1.1rem;
   line-height: 1.7;
+  text-align: justify;
 }
 
 .about-text strong {
@@ -33,4 +35,44 @@
 .about-text em {
   color: #ffdd57;
   font-style: italic;
+}
+
+/* ===========================
+   Responsive Adjustments
+=========================== */
+
+@media (max-width: 768px) {
+  .about-container {
+    max-width: 90%;
+    padding: 25px;
+    margin: 60px auto;
+  }
+
+  .about-title {
+    font-size: 1.6rem;
+  }
+
+  .about-text {
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+}
+
+@media (max-width: 480px) {
+  .about-container {
+    max-width: 95%;
+    padding: 20px;
+    margin: 40px auto;
+    border-radius: 12px;
+  }
+
+  .about-title {
+    font-size: 1.4rem;
+    margin-bottom: 15px;
+  }
+
+  .about-text {
+    font-size: 0.95rem;
+    line-height: 1.6;
+  }
 }

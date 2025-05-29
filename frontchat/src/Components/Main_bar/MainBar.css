@@ -1,4 +1,6 @@
-.mainbar{
+/* MainBar.css */
+
+.mainbar {
     background: url("../../assets/cosmic.jpg");
     height: 100svh;
     width: 100%;
@@ -10,47 +12,145 @@
     justify-content: center;
     z-index: -10;
 }
-.inner_main{
-    background-blend-mode:luminosity;
+
+.inner_main {
+    background-blend-mode: luminosity;
     display: flex;
     align-items: center;
     justify-content: center;
     background-color: rgba(0, 0, 0, 0.715);
     height: 100%;
     width: 100%;
+    flex-wrap: wrap;
+    padding: 1rem;
+    box-sizing: border-box;
 }
-.middle{
-    height: 70%;
-    width: 50%;
+
+.middle {
     color: aliceblue;
-    border-radius: 50px;
     display: flex;
-    align-items: start;
+    align-items: flex-start;
     justify-content: center;
     flex-direction: column;
-    gap: 5%;
+    gap: 1.5rem;
+    padding: 1.5rem;
 }
-.right{
-    height: 70%;
-    width: 40%;
+
+.right {
     display: flex;
     align-items: center;
     justify-content: center;
+    padding: 1.5rem;
 }
-.h1{
-    font-size: 4.5em;
+
+.h1 {
+    font-size: 3em;
+    line-height: 1.2;
+    margin: 0;
 }
-.ai{
-    background: linear-gradient(90deg,#065cb8c5,rgb(255, 255, 255));
+
+.ai_bot {
+    font-size: 1.1em;
+    color: aliceblue;
+}
+
+.ai {
+    background: linear-gradient(90deg, #065cb8c5, rgb(255, 255, 255));
     -webkit-text-fill-color: transparent;
     -webkit-background-clip: text;
-    font-size: 2em;
+    font-size: 1.8em;
 }
-.img_p{
-    height: inherit;
+
+.img_p {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
     clip-path: circle();
+    object-fit: cover;
 }
-.ai_bot{
+
+/* ===========================
+   RESPONSIVENESS FOR MOBILE
+=========================== */
+@media (max-width: 768px) {
+    .inner_main {
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        padding: 2rem 1rem;
+    }
+
+    .middle, .right {
+        width: 100%;
+        text-align: center;
+        align-items: center;
+    }
+
+    .h1 {
+        font-size: 2.5em;
+    }
+
+    .ai {
+        font-size: 1.5em;
+    }
+
+    .ai_bot {
+        font-size: 1em;
+    }
+
+    .img_p {
+        max-width: 200px;
+    }
+}
+
+@media (max-width: 480px) {
+  .mainbar{
+    background: linear-gradient(rgb(0, 166, 255),black);
+  }
+  .inner_main {
+    flex: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 1rem;
+  }
+
+  .right {
+    order: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 1rem;
+  }
+
+  .middle {
+    order: 1;
+    width: 100%;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    height: 50svh;
+  }
+
+  .h1 {
+    font-size: 2em;
+    line-height: 1.2;
+  }
+
+  .ai {
     font-size: 1.2em;
-    color: aliceblue;
+  }
+
+  .ai_bot {
+    font-size: 0.95em;
+  }
+
+  .img_p {
+    max-width: 180px;
+    width: 100%;
+    height: auto;
+  }
 }

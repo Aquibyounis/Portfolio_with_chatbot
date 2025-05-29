@@ -16,8 +16,7 @@ const Skills = () => {
             <p className='com_p'>Pandas</p>
             <p className='com_p'>ML Math</p>
             <p className='com_p'>TensorFlow</p>
-            <p className='com_p'>DL (Coming)</p>
-            <p className='com_p'>LLM (Coming)</p>
+            <p className='com_p'>DL (Theoritical)</p>
           </div>
         </span>
 
@@ -51,7 +50,6 @@ const Skills = () => {
           <div className="com">
             <p className='com_p'>Python</p>
             <p className='com_p'>Java</p>
-            <p className='com_p'>JavaScript</p>
           </div>
         </span>
 
@@ -59,7 +57,7 @@ const Skills = () => {
         <span className='tech_box'>
           <h2>DevOps & Cloud</h2>
           <div className="com">
-            <p className='com_p'>Docker</p>
+            <p className='com_p'>Docker(UnderCourse)</p>
             <p className='com_p'>AWS</p>
           </div>
         </span>

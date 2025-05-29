@@ -1,0 +1,34 @@
+.portfolio-section {
+  padding: 60px 20px;
+  text-align: center;
+  background-color: #0a0a0a;
+  color: #ffffff;
+}
+
+.portfolio-section h2 {
+  margin-bottom: 30px;
+  font-size: 2rem;
+  color: cyan;
+}
+
+.portfolio-links {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.portfolio-card {
+  background-color: #111;
+  color: white;
+  padding: 20px 30px;
+  border-radius: 12px;
+  text-decoration: none;
+  box-shadow: 0 0 10px cyan;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.portfolio-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 20px cyan;
+}

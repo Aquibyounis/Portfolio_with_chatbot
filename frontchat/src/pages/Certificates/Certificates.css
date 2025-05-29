@@ -1,0 +1,77 @@
+.certificates {
+  position: relative;
+  background: #000;
+  color: white;
+  padding: 4rem 2rem;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+/* Central vertical gradient line */
+.vertical-line {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 0;
+  width: 4px;
+  background: linear-gradient(45deg, cyan, rgb(247, 0, 247));
+  z-index: 0;
+  height: 100%;
+}
+
+/* Container for all certificate blocks */
+.certificate-container {
+  position: relative;
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  gap: 8rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Zigzag block */
+.certificate-block {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+}
+
+/* Left and right layout alternation */
+.certificate-block.left {
+  flex-direction: row;
+}
+
+.certificate-block.right {
+  flex-direction: row-reverse;
+}
+
+/* Certificate image styling */
+.certificate-img {
+  width: 180px;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 0.5rem;
+  box-shadow: 0 0 15px rgba(0, 255, 255, 0.4);
+}
+
+/* Horizontal connector line */
+.connector {
+  width: 60px;
+  height: 4px;
+  background: linear-gradient(to right, cyan, violet);
+  margin: 0 1rem;
+  flex-shrink: 0;
+}
+
+/* Text box */
+.certificate-text {
+  background: #111;
+  padding: 1rem 1.5rem;
+  border-radius: 0.5rem;
+  max-width: 400px;
+  box-shadow: 0 0 15px rgba(138, 43, 226, 0.4);
+  font-size: 1rem;
+  line-height: 1.5;
+}
