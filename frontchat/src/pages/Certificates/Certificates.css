@@ -1,77 +1,60 @@
-.certificates {
-  position: relative;
-  background: #000;
-  color: white;
-  padding: 4rem 2rem;
-  min-height: 100vh;
-  overflow-x: hidden;
-}
-
-/* Central vertical gradient line */
-.vertical-line {
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-  top: 0;
-  width: 4px;
-  background: linear-gradient(45deg, cyan, rgb(247, 0, 247));
-  z-index: 0;
-  height: 100%;
-}
-
-/* Container for all certificate blocks */
-.certificate-container {
-  position: relative;
-  z-index: 10;
-  display: flex;
-  flex-direction: column;
-  gap: 8rem;
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
-/* Zigzag block */
-.certificate-block {
+.certificates{
+  width: 100%;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
+  padding-top: 20%;
+  padding-bottom: 100px;
+  /* background: radial-gradient(circle at 10%, #023b5f, #333 50%, #eeeeeee4 75%, #333 25%); */
+  backdrop-filter: blur(10px);
+}
+.inner_certificates{
+  height: 100%;
+  width: 80%;
+  border-radius: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 20svh;
+}
+
+.cer-left,.cer-right{
+  height: 55svh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: inset 0px 0px 40px rgb(26, 55, 104);
+  border-radius: 50px;
   position: relative;
+  background-color: rgb(21, 21, 21);
+  transition-duration: 1s;
 }
-
-/* Left and right layout alternation */
-.certificate-block.left {
-  flex-direction: row;
-}
-
-.certificate-block.right {
+.cer-right{
   flex-direction: row-reverse;
 }
-
-/* Certificate image styling */
-.certificate-img {
-  width: 180px;
-  height: 180px;
-  object-fit: cover;
-  border-radius: 0.5rem;
-  box-shadow: 0 0 15px rgba(0, 255, 255, 0.4);
+.l-left{
+  height: 100%;
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
-
-/* Horizontal connector line */
-.connector {
-  width: 60px;
-  height: 4px;
-  background: linear-gradient(to right, cyan, violet);
-  margin: 0 1rem;
-  flex-shrink: 0;
+.l-right{
+  height: 100%;
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: aliceblue;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  text-align: center;
 }
-
-/* Text box */
-.certificate-text {
-  background: #111;
-  padding: 1rem 1.5rem;
-  border-radius: 0.5rem;
-  max-width: 400px;
-  box-shadow: 0 0 15px rgba(138, 43, 226, 0.4);
-  font-size: 1rem;
-  line-height: 1.5;
+.l-right p{
+  width: 80%;
+  font-size: 1.25em;
+}
+.l-left img{
+  height: 18rem;
+  border-radius: 50px;
 }

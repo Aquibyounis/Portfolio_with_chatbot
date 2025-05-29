@@ -12,12 +12,20 @@ const Contact = () => {
             </div>
             <div className="right_contact">
                 <ul className='c_ul'>
-                    <li>LINKEDIN</li>
-                    <li>TELEGRAM</li>
-                    <li>INSTAGRAM</li>
-                    <li>WHATSAPP</li>
+                    <a href="https://www.linkedin.com/in/aquib-younis-pula-6b205b275/" target="_blank" rel="noopener noreferrer">
+                      <li>LINKEDIN</li>
+                    </a>
+                    <a href="https://t.me/codepixelsx" target="_blank" rel="noopener noreferrer">
+                      <li>TELEGRAM</li>
+                    </a>
+                    <a href="https://www.instagram.com/code.pixelsx/?__pwa=1" target="_blank" rel="noopener noreferrer">
+                      <li>INSTAGRAM</li>
+                    </a>
+                    <a href="https://www.threads.net/@code.pixelsx?__pwa=1" target="_blank" rel="noopener noreferrer">
+                      <li>THREADS</li>
+                    </a>
                 </ul>
-                <li className='o'>aquibyounis2@gmail.com</li>
+                <a href="mailto:aquibyounis2@gmail.com" className='o'>aquibyounis2@gmail.com</a>
             </div>
         </div>
     </div>

@@ -39,6 +39,9 @@
 .inner_links p:hover{
   scale: 1.1;
 }
+.inner_links a{
+  text-decoration: none;
+}
 
 .side_head{
   color: #ffffff;
