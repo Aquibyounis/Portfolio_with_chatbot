@@ -4,6 +4,7 @@ import "./App.css"
 import '@fortawesome/fontawesome-free/css/all.min.css';
 import { BrowserRouter,Route, Routes } from "react-router-dom";
 import Certificates from "./pages/Certificates/Certificates";
+import Ai from "./pages/AI/Ai";
 
 
 function App() {
@@ -14,6 +15,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Home/>}/>
           <Route path="/certifications" element={<Certificates/>}/>
+          <Route path="/assistant" element={<Ai/>}/>
         </Routes>
       </BrowserRouter>
     </div>

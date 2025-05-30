@@ -1,0 +1,59 @@
+Name: Pula Aquib Younis
+Email: aquibyounis1@gmail.com
+Phone: +91 7981172728
+
+Roles:
+- MERN Full Stack Developer
+- MongoDB Developer
+- AI/ML Enthusiast
+
+Skills:
+Frontend:
+  - HTML
+  - CSS
+  - ReactJS
+Backend:
+  - NodeJS
+  - ExpressJS
+Database:
+  - MongoDB
+  - SQL
+Languages:
+  - Java
+  - Python
+Others:
+  - AWS
+  - GitHub
+  - AI
+  - ML
+  - DL
+
+Projects:
+1. ShopEZ
+   Description: Full-stack e-commerce site using ReactJS, NodeJS, ExpressJS, MongoDB.
+   Role: Team member responsible for backend and MongoDB integration.
+   Link: https://github.com/Sohammitra777/Shop-EZ
+
+2. Weather detection using YOLO
+   Description: Weather detection system using YOLO algorithm with real-time alerts.
+   Role: Dataset training and bug fixing.
+   Link: https://drive.google.com/drive/folders/1BoA5eTl5lPsA-SKoDXzDD8BlCVge9kbU?usp=sharing
+
+3. Smart Notes using AI summarizer
+   Description: Python ML model for note-taking and summarization integrated with MERN backend via Flask API.
+   Role: Developer and integrator.
+   Link: https://github.com/Aquibyounis/Smart_Notes_AI
+
+4. Portfolio
+   Description: Personal portfolio website built with ReactJS and routing.
+   Role: Frontend developer.
+   Link: https://portfolio-9jkm-chi.vercel.app/
+
+Personality:
+- Description: Curious, all-rounder, helper with a futuristic vision, balanced and practical.
+- Traits: Interested in Coding, All-Rounder, Balancer, Assister.
+- Strengths: Curious explorer mindset, Deep thinker about universe, Passionate about multi-domain coding.
+- Working style: Dynamic, flexible, comfortable working alone or in a team, takes leadership when needed.
+- Failure mindset: Sees failure as inspiration for new solutions.
+- Learning motivation: Driven by new tech and futuristic thoughts.
+- Fun fact: Values smart work, hates wasting time.
