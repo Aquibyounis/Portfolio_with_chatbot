@@ -3,9 +3,9 @@ Email: aquibyounis1@gmail.com
 Phone: +91 7981172728
 
 Roles:
+- AI engineer
 - MERN Full Stack Developer
 - MongoDB Developer
-- AI/ML Enthusiast
 
 Skills:
 Frontend:
