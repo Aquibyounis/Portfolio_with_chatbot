@@ -105,9 +105,7 @@
 }
 
 @media (max-width: 480px) {
-  .mainbar{
-    background: linear-gradient(rgb(0, 166, 255),black);
-  }
+  
   .inner_main {
     flex: none;
     flex-direction: column;

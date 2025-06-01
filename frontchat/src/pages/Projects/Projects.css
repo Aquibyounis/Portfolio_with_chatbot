@@ -1,0 +1,130 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
+:root {
+  --bg-color: #0d0d0d;
+  --card-color: #1a1a1a;
+  --accent: #00fff7;
+  --text-color: #f0f0f0;
+  --font: 'Montserrat', sans-serif;
+}
+
+body {
+  margin: 0;
+  background: var(--bg-color);
+  font-family: var(--font);
+  color: var(--text-color);
+}
+
+.projects-section {
+  padding: 8rem 2rem;
+  text-align: center;
+}
+
+.section-title {
+  font-size: 2.5rem;
+  margin-bottom: 3rem;
+  background: linear-gradient(90deg, var(--accent), #ff00ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+@keyframes glow {
+  0%, 100% {
+    text-shadow: 0 0 5px var(--accent);
+  }
+  50% {
+    text-shadow: 0 0 20px var(--accent);
+  }
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 2 columns on desktop */
+  gap: 2rem;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+@media (max-width: 768px) {
+  .projects-grid {
+    grid-template-columns: 1fr; /* 1 column on mobile */
+  }
+  .projects-section{
+    padding-top: 3em;
+  }
+}
+
+.project-card {
+  background: var(--card-color);
+  border-radius: 1rem;
+  padding: 2rem;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 0 20px rgba(0, 255, 255, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle at center, var(--accent), transparent 70%);
+  animation: liquidPulse 6s infinite linear;
+  z-index: 0;
+  opacity: 0.1;
+}
+
+@keyframes liquidPulse {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.project-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 0 25px rgba(0, 255, 255, 0.3);
+}
+
+.project-card h3 {
+  font-size: 1.4rem;
+  margin-bottom: 0.5rem;
+  position: relative;
+  z-index: 1;
+}
+
+.project-desc,
+.project-tech,
+.project-link {
+  position: relative;
+  z-index: 1;
+}
+
+.project-desc {
+  font-size: 1rem;
+  margin-bottom: 1rem;
+  color: #cccccc;
+}
+
+.project-tech {
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
+  color: #aaaaaa;
+}
+
+.project-link {
+  text-decoration: none;
+  color: var(--accent);
+  font-weight: bold;
+  transition: color 0.2s ease;
+}
+
+.project-link:hover {
+  color: #ffffff;
+}

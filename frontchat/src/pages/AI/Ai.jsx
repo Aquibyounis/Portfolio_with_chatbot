@@ -6,13 +6,49 @@ const Ai = () => {
     { sender: "bot", text: "Hey! How can I help you today?" },
   ]);
   const [input, setInput] = useState("");
-  const [isTyping, setIsTyping] = useState(false);
   const messagesEndRef = useRef(null);
+  const [isTyping, setIsTyping] = useState(false);
 
-  // Scroll to bottom when messages update
+  // Auto-scroll to bottom
   useEffect(() => {
     messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
-  }, [messages, isTyping]);
+  }, [messages]);
+
+  const simulateTyping = (text) => {
+    let index = 0;
+    const typingSpeed = 30; // milliseconds per character
+
+    // Add an empty bot message with typing: true
+    setMessages((prev) => [...prev, { sender: "bot", text: "", typing: true }]);
+
+    const interval = setInterval(() => {
+      setMessages((prevMessages) => {
+        const lastMessage = prevMessages[prevMessages.length - 1];
+        const updatedText = lastMessage.text + text.charAt(index);
+
+        const updatedMessages = [
+          ...prevMessages.slice(0, -1),
+          { ...lastMessage, text: updatedText },
+        ];
+
+        return updatedMessages;
+      });
+
+      index++;
+
+      if (index >= text.length) {
+        clearInterval(interval);
+        setMessages((prevMessages) => {
+          const lastMessage = prevMessages[prevMessages.length - 1];
+          return [
+            ...prevMessages.slice(0, -1),
+            { ...lastMessage, typing: false },
+          ];
+        });
+        setIsTyping(false);
+      }
+    }, typingSpeed);
+  };
 
   const sendMessage = async () => {
     if (!input.trim()) return;
@@ -26,17 +62,16 @@ const Ai = () => {
       const response = await fetch("http://localhost:8000/chat", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ message: userMessage }),
+        body: JSON.stringify({ question: userMessage }),
       });
-      const data = await response.json();
 
-      setMessages((prev) => [...prev, { sender: "bot", text: data.response }]);
+      const data = await response.json();
+      simulateTyping(data.result);
     } catch (error) {
       setMessages((prev) => [
         ...prev,
         { sender: "bot", text: "Oops! Something went wrong." },
       ]);
-    } finally {
       setIsTyping(false);
     }
   };
@@ -51,6 +86,7 @@ const Ai = () => {
   return (
     <div className="chat-container">
       <div className="chat-header">Peanut!</div>
+
       <div className="chat-messages">
         {messages.map((msg, i) => (
           <div

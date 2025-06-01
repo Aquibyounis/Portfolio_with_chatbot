@@ -16,7 +16,7 @@
 /* Header */
 .chat-header {
   padding: 20px 30px;
-  font-size: 1.8rem;
+  font-size: 2.2rem;
   font-weight: 600;
   border-radius: 50px;
   box-shadow: 0px 300px 250px -10px blue;
@@ -111,6 +111,7 @@
 .chat-input-area {
   display: flex;
   padding: 15px 30px;
+  align-items: center;
 }
 
 /* Textarea input */
@@ -125,6 +126,7 @@
   color: white;
   outline: none;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  height: 90px;
 }
 
 /* Send button */
@@ -139,6 +141,7 @@
   font-size: 1rem;
   cursor: pointer;
   transition: background-color 0.3s ease;
+  height: max-content;
 }
 
 .send-btn:hover {
@@ -172,5 +175,11 @@
 }
 
 @media (max-width: 600px) {
-    
+    .chat-input{
+      height: 130%;
+    }
+    .chat-container{
+      padding-top: 0px;
+      padding-bottom: 2em;
+    }
 }

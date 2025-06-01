@@ -100,6 +100,9 @@
 @media (max-width: 480px) {
   .tech{
     width: 100%;
+    height: fit-content;
+    padding-bottom: 2em;
+    background-color: transparent;
   }
 
   .head {
@@ -108,6 +111,11 @@
 
   .tech_box h2 {
     font-size: 1.2rem;
+    width: 90%;
+  }
+  .tech_box{
+    width: 90%;
+    height: fit-content;
   }
 
   .com {

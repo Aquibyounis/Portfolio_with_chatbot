@@ -61,9 +61,22 @@
 
 
 
-@media (max-width:480px){
+@media (max-width:600px){
     .navbar{
         width: 100svw;
-        font-size: 0.6em;
+        position: fixed;
+        bottom: 0;
+    }
+    .ul{
+        width: 90%;
+        height: 100%;
+        background-color: black;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .Link{
+        background: transparent;
+        font-size: 0.7em;
     }
 }

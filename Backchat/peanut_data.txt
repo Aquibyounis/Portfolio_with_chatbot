@@ -50,7 +50,7 @@ Projects:
    Link: https://portfolio-9jkm-chi.vercel.app/
 
 Personality:
-- Description: Curious, all-rounder, helper with a futuristic vision, balanced and practical.
+- Curious, all-rounder, helper with a futuristic vision, balanced and practical.
 - Traits: Interested in Coding, All-Rounder, Balancer, Assister.
 - Strengths: Curious explorer mindset, Deep thinker about universe, Passionate about multi-domain coding.
 - Working style: Dynamic, flexible, comfortable working alone or in a team, takes leadership when needed.
