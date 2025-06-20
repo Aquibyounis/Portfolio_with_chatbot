@@ -9,27 +9,29 @@ const Skills = () => {
         
         {/* AI & ML First */}
         <span className='tech_box'>
-          <h2>AI Engineering</h2>
+          <h2>AI</h2>
           <div className="com">
             <p className='com_p'>Python</p>
             <p className='com_p'>NumPy</p>
             <p className='com_p'>Pandas</p>
-            <p className='com_p'>ML Math</p>
-            <p className='com_p'>TensorFlow</p>
-            <p className='com_p'>DL (Theoritical)</p>
+            <p className='com_p'>ML</p>
+            <p className='com_p'>DL</p>
+            <p className='com_p'>NLP</p>
           </div>
         </span>
 
-        {/* Tools */}
+        {/* AI & ML First */}
         <span className='tech_box'>
-          <h2>Tools</h2>
+          <h2>LLM and GenAI</h2>
           <div className="com">
-            <p className='com_p'>Jupyter Notebook</p>
-            <p className='com_p'>Git</p>
-            <p className='com_p'>GitHub</p>
-            <p className='com_p'>Google Colab</p>
+            <p className='com_p'>LangChain</p>
+            <p className='com_p'>VectorDB</p>
+            <p className='com_p'>Chroma</p>
+            <p className='com_p'>FAISS</p>
+            <p className='com_p'>NLP</p>
           </div>
         </span>
+
 
         {/* Web Dev (MERN) */}
         <span className='tech_box'>
@@ -53,6 +55,7 @@ const Skills = () => {
           </div>
         </span>
 
+        
         {/* Cloud & Ops */}
         <span className='tech_box'>
           <h2>DevOps & Cloud</h2>
@@ -62,6 +65,16 @@ const Skills = () => {
           </div>
         </span>
 
+        {/* Tools */}
+        <span className='tech_box'>
+          <h2>Tools</h2>
+          <div className="com">
+            <p className='com_p'>Jupyter Notebook</p>
+            <p className='com_p'>Git</p>
+            <p className='com_p'>GitHub</p>
+            <p className='com_p'>Google Colab</p>
+          </div>
+        </span>
       </div>
     </div>
   )

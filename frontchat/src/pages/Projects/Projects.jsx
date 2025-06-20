@@ -3,10 +3,10 @@ import './Projects.css';
 
 const projects = [
   {
-    title: "ShopEZ – Full Stack E-Commerce",
-    description: "A modern full-stack shopping app with authentication, cart and built on a team of 4 in SmartBridge",
-    tech: "React, Node.js, Express, MongoDB",
-    link: "https://github.com/Aquibyounis/Shop-EZ"
+    title: "Commander NOVA Virtual Astronaut",
+    description: "A astronaut which in virtual and help as co-pilot, FUTURISTIC",
+    tech: "Langchain, LLM, Ollama, HuggingFace, ChromaDB",
+    link: "https://aquibyounis.netlify.app"
   },
   {
     title: "Smart Notes – AI Summarizer",
@@ -17,13 +17,19 @@ const projects = [
   {
     title: "Weather Detection using YOLO",
     description: "Detects weather conditions in images using YOLO object detection.",
-    tech: "YOLOv5, OpenCV, Python",
+    tech: "YOLOv8,Google Colab, Python",
     link: "https://drive.google.com/drive/folders/12Hhw37UvApFXi1A5-Z6bDI8NH2ZUJyq5?usp=sharing"
+  },
+  {
+    title: "ShopEZ – Full Stack E-Commerce",
+    description: "A modern full-stack shopping app with authentication, cart and built on a team of 4 in SmartBridge",
+    tech: "React, Node.js, Express, MongoDB",
+    link: "https://github.com/Aquibyounis/Shop-EZ"
   },
   {
     title: "Personal Portfolio Website",
     description: "My own portfolio showcasing skills, experience.",
-    tech: "ReactJS, CSS, FastAPI, AI",
+    tech: "ReactJS, CSS, AI",
     link: "https://aquibyounis.netlify.app"
   }
 ];
@@ -31,7 +37,7 @@ const projects = [
 const Projects = () => {
   return (
     <section className="projects-section" id="projects">
-      <h2 className="section-title">🚀 My Projects</h2>
+      <h2 className="section-title">My Projects</h2>
       <div className="projects-grid">
         {projects.map((project, index) => (
           <div className="project-card" key={index}>

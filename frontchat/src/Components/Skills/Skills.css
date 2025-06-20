@@ -1,10 +1,9 @@
 .tech {
   width: 100%;
-  background-color: #000;
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-bottom: 150px;
+  padding-bottom: 150px;
 }
 
 .head {
@@ -62,16 +61,17 @@
 .com_p {
   padding: 10px 5px;
   background-color: transparent;
-  border: 1.5px solid #cfcf0a;
+  border: 1.5px solid #0a73cf;
   border-radius: 12px;
   font-size: 0.95rem;
   text-align: center;
   color: #fefefe;
+  word-wrap: break-word;
   transition: background 0.3s;
 }
 
 .com_p:hover {
-  background-color: rgba(255, 255, 0, 0.2);
+  box-shadow: 10px 10px 10px -5px rgb(8, 119, 216);
   cursor: default;
 }
 
