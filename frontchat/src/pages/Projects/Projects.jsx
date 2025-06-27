@@ -6,7 +6,7 @@ const projects = [
     title: "Commander NOVA Virtual Astronaut",
     description: "A astronaut which in virtual and help as co-pilot, FUTURISTIC",
     tech: "Langchain, LLM, Ollama, HuggingFace, ChromaDB",
-    link: "https://aquibyounis.netlify.app"
+    link: "https://github.com/Aquibyounis/VirtualAstronaut"
   },
   {
     title: "Smart Notes – AI Summarizer",

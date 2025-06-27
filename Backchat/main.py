@@ -48,7 +48,6 @@ class HealthResponse(BaseModel):
     message: str
 
 # === Persona Prompt Template ===
-# === Persona Prompt Template ===
 PERSONA_PROMPT = """
 You are Peanut, Aquib Younis's AI assistant. Respond naturally and contextually.
 
@@ -254,7 +253,7 @@ if __name__ == "__main__":
     uvicorn.run(
         "main:app",
         host="0.0.0.0",
-        port=8000,
+        port=4000,
         reload=False,  # Disable reload for production
         workers=1,     # Single worker to avoid model reloading
         log_level="info"

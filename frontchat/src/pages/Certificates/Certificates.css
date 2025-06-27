@@ -26,8 +26,9 @@
   align-items: center;
   justify-content: center;
   background-color: rgb(21, 21, 21);
-  box-shadow: inset 0px 0px 40px rgb(26, 55, 104);
+  box-shadow: inset 0px 0px 100px rgba(26, 55, 104, 0.676);
   border-radius: 30px;
+  border: 2px solid rgb(187, 204, 220);
   padding: 20px;
   gap: 20px;
   transition-duration: 1s;

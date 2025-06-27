@@ -17,7 +17,7 @@ const CommandBar = () => {
         placeholder="Ask me anything ..."
         className="command-input" onClick={handleClick}
       />
-      <button className="send-btn">
+      <button className="send-btns">
         <i className="fa-solid fa-arrow-up"></i>
       </button>
     </div>

@@ -30,10 +30,6 @@ const Home = () => {
 
       {/* CommandBar placed right under MainBar */}
       <motion.div
-        variants={sectionVariant}
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ amount: 0.2 }}
       >
         <CommandBar />
       </motion.div>

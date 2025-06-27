@@ -112,7 +112,7 @@ const Ai = () => {
         <textarea
           className="chat-input"
           rows={1}
-          placeholder="Type your message..."
+          placeholder="Ask me anything..."
           value={input}
           onChange={(e) => setInput(e.target.value)}
           onKeyDown={handleKeyDown}

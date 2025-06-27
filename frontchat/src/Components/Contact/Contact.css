@@ -21,7 +21,7 @@
 .inner_contact {
   width: 80%;
   display: flex;
-  background-color: white;
+  background-color: rgb(230, 231, 235);
   flex-direction: row;
   border-radius: 12px;
   overflow: hidden;
