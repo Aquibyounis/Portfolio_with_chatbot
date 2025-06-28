@@ -1,3 +1,4 @@
+// src/Pages/Home/Home.jsx
 import React from 'react';
 import { motion } from 'framer-motion';
 
@@ -9,11 +10,11 @@ import Links from "../../Components/Links/Links.jsx";
 import Skills from "../../Components/Skills/Skills.jsx";
 import Portfolios from "../../Components/Portfolios/Portfolios.jsx";
 import RippleEffect from "../../Components/RippleEffect/RippleEffect.jsx";
+import Dashboard from '../../Components/dashboard/dashboard.jsx';
+import MiniNav from "../../Components/MiniNav/MiniNav.jsx"; // ✅ New import
 
 import "./Home.css";
-import Dashboard from '../../Components/dashboard/dashboard.jsx';
 
-// Animation variant for scroll-triggered sections
 const sectionVariant = {
   hidden: { opacity: 0, scale: 0.85, y: 40 },
   visible: {
@@ -29,80 +30,37 @@ const Home = () => {
     <div className="home">
       <MainBar />
 
-      {/* CommandBar placed right under MainBar */}
-      <motion.div
-        variants={sectionVariant}
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ amount: 0.0 }}
-      >
+      <motion.div id="command" variants={sectionVariant} initial="hidden" whileInView="visible" viewport={{ amount: 0.0 }}>
         <CommandBar />
       </motion.div>
 
-      {/* About Section */}
-      <motion.div
-        variants={sectionVariant}
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ amount: 0.2 }}
-      >
+      <motion.div id="about" variants={sectionVariant} initial="hidden" whileInView="visible" viewport={{ amount: 0.2 }}>
         <About />
       </motion.div>
 
-      {/* dashboard Section */}
-      <motion.div
-        variants={sectionVariant}
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ amount: 0.2 }}
-      >
+      <motion.div id="dashboard" variants={sectionVariant} initial="hidden" whileInView="visible" viewport={{ amount: 0.2 }}>
         <Dashboard />
       </motion.div>
 
-      {/* Skills Section */}
-      <motion.div
-        variants={sectionVariant}
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ amount: 0.2 }}
-      >
+      <motion.div id="skills" variants={sectionVariant} initial="hidden" whileInView="visible" viewport={{ amount: 0.2 }}>
         <Skills />
       </motion.div>
 
-
-      {/* Links Section */}
-      <motion.div
-        variants={sectionVariant}
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ amount: 0.2 }}
-      >
+      <motion.div id="links" variants={sectionVariant} initial="hidden" whileInView="visible" viewport={{ amount: 0.2 }}>
         <Links />
       </motion.div>
 
-      
-      {/* Contact Section */}
-      <motion.div
-        variants={sectionVariant}
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ amount: 0.1 }}
-      >
+      <motion.div id="contact" variants={sectionVariant} initial="hidden" whileInView="visible" viewport={{ amount: 0.1 }}>
         <Contact />
       </motion.div>
 
-      {/* Portfolios Section */}
-      <motion.div
-        variants={sectionVariant}
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ amount: 0.2 }}
-      >
+      <motion.div id="portfolio" variants={sectionVariant} initial="hidden" whileInView="visible" viewport={{ amount: 0.2 }}>
         <Portfolios />
       </motion.div>
 
-      {/* Global Ripple Effect overlay (non-blocking) */}
       <RippleEffect />
+
+      <MiniNav /> {/* ✅ Mini vertical navbar */}
     </div>
   );
 };
