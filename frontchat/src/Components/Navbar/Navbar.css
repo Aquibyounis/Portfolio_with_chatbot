@@ -18,21 +18,22 @@
     display: flex;
     align-items: center;
     justify-content: space-evenly;
-    box-shadow: 0px 0px 10px -5px white inset;
+    box-shadow:0px 0px 20px -5px rgb(0, 0, 0) inset, 0px 0px 10px -5px white inset;
     transition-duration: 0.5s;
 }
 .Link{
-    text-shadow: 0px 0px 10px black;
+    text-shadow: 0px 0px 5px rgb(0, 0, 0);
     padding: 1%;
     transition-duration: 0.2s;
     cursor: pointer;
     position: relative;
     font-size: 1.2em;
-    color: aliceblue;
+    color: rgb(231, 239, 245);
     text-decoration: none;
     border-radius: 50px;
     position: relative;
     text-decoration: none;
+    font-weight: 600;
 }
 
 .Link::after {

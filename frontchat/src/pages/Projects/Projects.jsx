@@ -45,13 +45,6 @@ const initialProjects = [
     description: "A modern full-stack shopping app with authentication, cart and built on a team of 4 in SmartBridge",
     tech: "React, Node.js, Express, MongoDB",
     link: "https://github.com/Aquibyounis/Shop-EZ"
-  },
-  {
-    id: '5',
-    title: "Personal Portfolio Website",
-    description: "My own portfolio showcasing skills, experience.",
-    tech: "ReactJS, CSS, AI",
-    link: "https://aquibyounis.netlify.app"
   }
 ];
 

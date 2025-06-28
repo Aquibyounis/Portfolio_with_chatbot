@@ -11,6 +11,7 @@ import Portfolios from "../../Components/Portfolios/Portfolios.jsx";
 import RippleEffect from "../../Components/RippleEffect/RippleEffect.jsx";
 
 import "./Home.css";
+import Dashboard from '../../Components/dashboard/dashboard.jsx';
 
 // Animation variant for scroll-triggered sections
 const sectionVariant = {
@@ -48,6 +49,16 @@ const Home = () => {
         <About />
       </motion.div>
 
+      {/* dashboard Section */}
+      <motion.div
+        variants={sectionVariant}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ amount: 0.2 }}
+      >
+        <Dashboard />
+      </motion.div>
+
       {/* Skills Section */}
       <motion.div
         variants={sectionVariant}
@@ -57,6 +68,7 @@ const Home = () => {
       >
         <Skills />
       </motion.div>
+
 
       {/* Links Section */}
       <motion.div
