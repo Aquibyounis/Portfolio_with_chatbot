@@ -52,6 +52,7 @@ const Skills = () => {
           <div className="com">
             <p className='com_p'>Python</p>
             <p className='com_p'>Java</p>
+            <p className='com_p'>MySql</p>
           </div>
         </span>
 

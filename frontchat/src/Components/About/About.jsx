@@ -6,17 +6,17 @@ const About = () => {
     <div className="about-container">
       <h2 className="about-title">🤖 About Me</h2>
       <p className="about-text">
-        I’m <strong>"Aquib Younis"</strong> — an AI Engineer on a mission to blur the line between code and cognition.
+        Hi, I’m <strong>Aquib Younis</strong> — an AI Engineer passionate about bridging the gap between code and theory.
         <br /><br />
-        My world revolves around <strong>Machine Learning</strong>, <strong>Deep Learning</strong>, and <strong>Natural Language Processing</strong>. Whether it's training neural networks, fine-tuning transformers, or building LLM-powered agents — I live at the intersection of math, logic, and creativity.
+        I live and breathe <strong>Machine Learning</strong>, <strong>Deep Learning</strong>, and <strong>Natural Language Processing</strong>. Whether it’s training neural networks, fine-tuning transformers, or crafting LLM-powered agents, I thrive at the intersection of logic and creativity.
         <br /><br />
-        I specialize in creating models that don’t just predict — they <em>understand</em>. I design systems that listen, learn, and respond intelligently — from personalized AI chatbots to real-time computer vision tools and natural language pipelines.
+        I focus on building models that don’t just make predictions — they <em>understand</em>. From personalized AI chatbots to real-time computer vision systems and natural language pipelines, I design tools that listen, learn, and respond smartly.
         <br /><br />
-        And while my core lies in AI, I also build the brains **and** the body: integrating models directly into modern web platforms using the <strong>MERN stack</strong>, so everything from the backend to the interface is one unified, intelligent system.
+        But I don’t stop at AI alone — I also bring it to life on the web. Using the <strong>MERN stack</strong>, I integrate these intelligent systems directly into full-stack applications, turning standalone models into real-world, user-ready experiences.
         <br /><br />
-        I'm passionate about building a future where apps don’t just work — they think.<br />
+        What drives me? A vision for a future where applications don’t just work — they <em>think</em>.
         <br /><br />
-        <strong>Let's code the next frontier of intelligence. ⚡</strong>
+        <strong>Let’s build what’s next. ⚡</strong>
       </p>
     </div>
   )

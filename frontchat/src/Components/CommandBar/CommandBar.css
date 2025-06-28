@@ -11,10 +11,7 @@
   border-top: 1px solid #0a5768;
   border-radius: 30px;
   box-shadow: 0px 0px 20px -5px cyan;
-  position: absolute; /* ⬅ Replaced absolute */
-  bottom: -8%;
-  left: 50%;
-  translate: -50%;
+  position: relative;
 }
 .tag_h1{
   color: #6d6666;
