@@ -15,10 +15,11 @@ const Ai = () => {
   }, [messages]);
 
   const simulateTyping = (text) => {
-    let index = 0;
-    const typingSpeed = 30; // milliseconds per character
+    let index = -1;
+    const typingSpeed = 30;
 
-    // Add an empty bot message with typing: true
+    text = String(text); // ✅ Fix: ensure it's a string
+
     setMessages((prev) => [...prev, { sender: "bot", text: "", typing: true }]);
 
     const interval = setInterval(() => {
@@ -50,6 +51,7 @@ const Ai = () => {
     }, typingSpeed);
   };
 
+
   const sendMessage = async () => {
     if (!input.trim()) return;
 
@@ -66,7 +68,14 @@ const Ai = () => {
       });
 
       const data = await response.json();
-      simulateTyping(data.result);
+      console.log("API Response:", data);
+
+      const resultText =
+        typeof data.result === "string"
+          ? data.result
+          : JSON.stringify(data.result);
+
+      simulateTyping(resultText);
     } catch (error) {
       setMessages((prev) => [
         ...prev,
