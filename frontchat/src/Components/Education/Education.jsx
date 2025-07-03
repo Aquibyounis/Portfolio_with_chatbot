@@ -6,21 +6,24 @@ const Education = () => {
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => setIsVisible(entry.isIntersecting),
-      { threshold: 0.3 }
-    );
+  const currentRef = containerRef.current;
 
-    if (containerRef.current) {
-      observer.observe(containerRef.current);
+  const observer = new IntersectionObserver(
+    ([entry]) => setIsVisible(entry.isIntersecting),
+    { threshold: 0.3 }
+  );
+
+  if (currentRef) {
+    observer.observe(currentRef);
+  }
+
+  return () => {
+    if (currentRef) {
+      observer.unobserve(currentRef);
     }
+  };
+}, []);
 
-    return () => {
-      if (containerRef.current) {
-        observer.unobserve(containerRef.current);
-      }
-    };
-  }, []);
 
   return (
     <div className={`edu-container ${isVisible ? 'active' : ''}`} ref={containerRef}>
