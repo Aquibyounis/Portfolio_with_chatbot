@@ -1,25 +1,77 @@
 .edu-container {
-  display: flex;
-  justify-content: center;
-  gap: 25px;
-  padding: 2rem;
   min-height: 50vh;
-  color: #f5f5f5;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  margin-bottom: 10%;
+  margin-bottom: 5%;
+  width: 100%;
+  position: relative;
+}
+
+/* Purple vertical line (scroll activated) */
+.edu-container::before {
+  content: '';
+  position: absolute;
+  right: 50%;
+  top: 10%;
+  height: 80%;
+  width: 4px;
+  background: linear-gradient(180deg, #a020f0, #ff00ff);
+  opacity: 0;
+  transform: scaleY(0);
+  transition: all 0.5s ease-in-out;
+  border-radius: 2px;
+}
+
+.edu-container.active::before {
+  opacity: 1;
+  transform: scaleY(1);
+  box-shadow: 0 0 12px 4px #e100ff7c;
+}
+
+.inner-container {
+  color: #f5f5f5;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10%;
+  position: relative;
 }
 
 .edu-card,
 .hobbies-card {
-  background: linear-gradient(45deg,#345b87 ,rgb(0, 0, 0));
+  margin-bottom: 1%;
+  background: linear-gradient(45deg, #345b875b, rgba(0, 0, 0, 0.372));
   backdrop-filter: blur(50px);
-  height: 55svh;
+  height: fit-content;
   padding: 0.5em;
+  width: 40%;
   border-radius: 16px;
-  box-shadow: 0 8px 24px rgba(0, 157, 255, 0.2);
+  box-shadow: 0px 0px 50px -5px #377e9486 0px 0px 100px 0px #ff00ff inset;
   transition: transform 0.3s ease;
+  border-left: 5px solid #ff00ff;
 }
-
+.edu-card::after{
+  content: '';
+  position: absolute;
+  right: -10%;
+  top: 50%;
+  height: 5px;
+  width: 9%;
+  border-radius: 50px;
+  box-shadow: 0 0 12px 4px #e100ff7c;
+  background: linear-gradient(45deg, #a020f0, #ff00ff);
+}
+.hobbies-card::before{
+  content: '';
+  position: absolute;
+  left: -11%;
+  border-radius: 50px;
+  box-shadow: 0 0 12px 4px #e100ff7c;
+  top: 50%;
+  height: 5px;
+  width: 9%;
+  background: linear-gradient(45deg, #a020f0, #ff00ff);
+}
 .edu-card:hover,
 .hobbies-card:hover {
   transform: translateY(-5px);
@@ -30,7 +82,7 @@
   font-size: 1.8rem;
   margin-bottom: 1.2rem;
   color: #ffffff;
-  background: linear-gradient(45deg,rgb(5, 134, 220),white);
+  background: linear-gradient(45deg, rgb(5, 134, 220), white);
   width: fit-content;
   -webkit-text-fill-color: transparent;
   -webkit-background-clip: text;
@@ -43,7 +95,7 @@
 .edu-section h3 {
   margin-bottom: 0.5rem;
   color: #e03fa2;
-  background: linear-gradient(45deg,#ff009d,rgb(240, 3, 240));
+  background: linear-gradient(45deg, #ff009d, rgb(240, 3, 240));
   width: fit-content;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -59,13 +111,13 @@
 
 .hobbies-card li {
   margin-bottom: 0.8rem;
-  list-style-type:circle;
+  list-style-type: circle;
   line-height: 1.4;
 }
 
 /* Responsive */
-@media (max-width: 768px) {
-  .edu-container {
+@media (max-width: 600px) {
+  .inner-container {
     flex-direction: column;
     align-items: center;
     padding: 1rem;
@@ -74,5 +126,23 @@
   .edu-card,
   .hobbies-card {
     width: 90%;
+  }
+  .edu-card::after,.hobbies-card::before{
+    content: '';
+    height: 0px;
+    width: 0px;
+    box-shadow: none;
+  }
+  .edu-container::before{
+    content: '';
+    position: absolute;
+    left: 5%;
+    height: 80%;
+    width: 4px;
+    background: linear-gradient(180deg, #a020f0, #ff00ff);
+    opacity: 0;
+    transform: scaleY(0);
+    transition: all 0.5s ease-in-out;
+    border-radius: 20px;
   }
 }
