@@ -1,6 +1,8 @@
-# Getting Started with Create React App
+# Personal Developer Portfolio with Peanut AI Assistant
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project is a personal portfolio website created using [Create React App](https://github.com/facebook/create-react-app). It showcases my skills, projects, certifications, and includes a custom AI assistant named **Peanut**, built using FastAPI, LangChain, ChromaDB, and the Groq API (Gemma model).
+
+> ⚠️ Note: Peanut is integrated in the UI but is **not yet hosted**, so chat features are currently unavailable until backend deployment.
 
 ## Available Scripts
 
@@ -8,26 +10,23 @@ In the project directory, you can run:
 
 ### `npm start`
 
-Runs the app in the development mode.\
+Runs the React portfolio in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
 The page will reload when you make changes.\
 You may also see any lint errors in the console.
 
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
 ### `npm run build`
 
-Builds the app for production to the `build` folder.\
+Builds the React portfolio for production to the `build` folder.\
 It correctly bundles React in production mode and optimizes the build for the best performance.
 
 The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Your portfolio is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### `npm test`
+
+Launches the test runner in the interactive watch mode.
 
 ### `npm run eject`
 
@@ -35,36 +34,59 @@ See the section about [deployment](https://facebook.github.io/create-react-app/d
 
 If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+---
+
+## Peanut AI Assistant (Integrated Inside the Portfolio)
+
+Peanut is a persona-based AI assistant trained on my personal and professional data, designed to answer:
+
+- Questions about me, my skills, and experience
+- HR-based questions like strengths, weaknesses, goals
+- Details about my projects, certifications, and interests
+
+### Built With:
+
+- 🧠 **Groq API** (Gemma model)
+- 🧠 **LangChain v0.3+**
+- 🔍 **ChromaDB** (for vector storage)
+- 💡 **HuggingFace Embeddings**
+- 🚀 **FastAPI Backend** (inside `/peanut` folder)
+
+### API Endpoints:
+
+- `/chat`: Chat endpoint using local memory
+- `/chat/batch`: Batch Q&A
+- `/reload`: Reload the data from file
+- `/stats`: Show vector DB stats
+- `/health`: Backend health check
+
+> Peanut is not hosted yet, so the chat feature is currently unavailable in production.
+
+---
 
 ## Learn More
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+You can learn more about the technologies used in this portfolio:
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+- [React documentation](https://reactjs.org/)
+- [LangChain Docs](https://docs.langchain.com/)
+- [ChromaDB](https://docs.trychroma.com/)
+- [FastAPI](https://fastapi.tiangolo.com/)
+- [Groq Console](https://console.groq.com/)
 
-### Code Splitting
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## Project Deployment
 
-### Analyzing the Bundle Size
+| Component         | Status         |
+|------------------|----------------|
+| Frontend (React) | ✅ Live         |
+| Peanut AI Model  | 🚧 Not yet hosted |
+| API Integration  | ✅ UI Connected |
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+---
 
-### Making a Progressive Web App
+## Folder Structure
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
