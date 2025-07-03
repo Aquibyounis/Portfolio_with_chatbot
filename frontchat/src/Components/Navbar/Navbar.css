@@ -20,6 +20,7 @@
     justify-content: space-evenly;
     box-shadow:0px 0px 20px -5px rgb(0, 0, 0) inset, 0px 0px 10px -5px white inset;
     transition-duration: 0.5s;
+    
 }
 .Link{
     text-shadow: 0px 0px 5px rgb(0, 0, 0);
@@ -60,19 +61,26 @@
 @media (max-width:600px){
     .navbar{
         width: 100svw;
-        position: fixed;
-        bottom: 0;
+        position: sticky;
+        bottom: 2%;
     }
     .ul{
+        background: linear-gradient(45deg,rgb(20, 33, 50),transparent);
         width: 90%;
         height: 100%;
-        background-color: black;
         display: flex;
         align-items: center;
         justify-content: space-between;
     }
     .Link{
+        color: rgb(202, 210, 216);
+        height: 70%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column-reverse;
         background: transparent;
-        font-size: 0.7em;
+        font-size: 0.65em;
+        text-align: center;
     }
 }

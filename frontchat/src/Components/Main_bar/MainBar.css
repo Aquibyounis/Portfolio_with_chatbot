@@ -1,7 +1,7 @@
 /* MainBar.css */
 
 .mainbar {
-    background: url("../../assets/cosmic.jpg");
+    background: url("../../assets/back2.png");
     height: 100svh;
     width: 100%;
     background-position: center;
@@ -18,14 +18,14 @@
     display: flex;
     align-items: center;
     justify-content: space-evenly;
-    background-color: rgba(0, 0, 0, 0.715);
-    background: linear-gradient(rgba(0, 0, 0, 0.456),rgb(12, 12, 12) 100%);
+    background: linear-gradient(rgba(0, 0, 0, 0.00226),rgba(12, 12, 12) 100%);
     height: 100%;
     width: 100%;
     flex-wrap: wrap;
     padding: 1rem;
     box-sizing: border-box;
     scale: 1.1;
+    backdrop-filter: blur(2px);
 }
 
 .middle {
@@ -68,10 +68,14 @@
     width: 100%;
     max-width: 300px;
     height: auto;
-    clip-path: circle();
+    border-radius:60% 40% 65% 35% / 37% 53% 47% 63% ;
     object-fit: cover;
+    transition-duration: 0.7s;
+    filter: drop-shadow(0px 10px 10px rgb(5, 109, 150));
+  }
+.img_p:hover{    
+  filter: drop-shadow(0px 15px 15px rgb(5, 109, 150));
 }
-
 /* ===========================
    RESPONSIVENESS FOR MOBILE
 =========================== */
@@ -153,5 +157,6 @@
     max-width: 180px;
     width: 100%;
     height: auto;
+    box-shadow: 0px 10px 15px 0px rgb(5, 115, 174);
   }
 }

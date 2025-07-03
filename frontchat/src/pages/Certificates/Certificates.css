@@ -1,4 +1,8 @@
 .certificates {
+  background: url("../../assets/back2.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
   width: 100%;
   display: flex;
   align-items: center;
@@ -25,7 +29,7 @@
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  background-color: rgb(21, 21, 21);
+  background-color: rgba(21, 21, 21, 0.582);
   box-shadow: inset 0px 0px 100px rgba(26, 55, 104, 0.676);
   border-radius: 30px;
   border: 2px solid rgb(187, 204, 220);
@@ -63,7 +67,7 @@
 }
 
 .l-right p {
-  font-size: 1.1em;
+  font-size: 1.2em;
   width: 90%;
 }
 

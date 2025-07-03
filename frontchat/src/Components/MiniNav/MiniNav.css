@@ -25,3 +25,10 @@
 .mini-nav-item:hover {
   background-color: #437c88;
 }
+
+
+@media (max-width:600px) {
+  .mini-nav{
+    visibility: hidden;
+  }
+}

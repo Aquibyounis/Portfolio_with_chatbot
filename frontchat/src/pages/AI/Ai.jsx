@@ -79,7 +79,7 @@ const Ai = () => {
     } catch (error) {
       setMessages((prev) => [
         ...prev,
-        { sender: "bot", text: "Oops! Something went wrong." },
+        { sender: "bot", text: "Sumimasen, My Model isn't Hosted yet 🥲." },
       ]);
       setIsTyping(false);
     }

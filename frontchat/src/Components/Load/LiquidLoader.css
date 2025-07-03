@@ -1,0 +1,57 @@
+.loader-container {
+  height: 100vh;
+  width: 100vw;
+  background: #0f2027; /* elegant dark gradient */
+  background: linear-gradient(to right, #2c5364, #203a43, #0f2027);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  position: fixed;
+  z-index: 9999;
+}
+
+.loader-text {
+  color: white;
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.4rem;
+  margin-top: 20px;
+  animation: fadeIn 2s ease-in-out infinite alternate;
+}
+
+.liquid-bar {
+  width: 60%;
+  height: 20px;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 50px;
+  box-shadow: 0px 0px 10px 0px black inset;
+  overflow: hidden;
+  position: relative;
+}
+
+.liquid {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, #00c9ff, #92fe9d);
+  border-radius: 10px;
+  animation: moveLiquid 3s cubic-bezier(0.215, 0.610, 0.355, 1)  forwards;
+}
+
+@keyframes moveLiquid {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0.6;
+  }
+  100% {
+    opacity: 1;
+  }
+}

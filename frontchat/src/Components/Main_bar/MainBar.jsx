@@ -1,6 +1,6 @@
 import React from 'react'
 import "./MainBar.css"
-import profile from "../../assets/profile.jpg"
+import profile from "../../assets/favicon.jpg"
 
 const MainBar = () => {
   return (

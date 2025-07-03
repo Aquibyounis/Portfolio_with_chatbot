@@ -6,20 +6,17 @@ const About = () => {
     <div className="about-container">
       <h2 className="about-title">🤖 About Me</h2>
       <p className="about-text">
-        Hi, I’m <strong>Aquib Younis</strong> — an Aspiring AI Engineer passionate developing code and theory🪐.
+        Hey, I’m <strong>Aquib Younis</strong> — an aspiring AI Engineer who loves blending code with creativity 🪐.
         <br /><br />
-        I love <strong>AI</strong> and <strong>Machine Learning</strong>, <strong>Deep Learning</strong>, and <strong>Natural Language Processing</strong>. Developing LLM-powered agents, I am at the intersection of logic and creativity.
+        I build smart systems with <strong>LLMs</strong>, <strong>Deep Learning</strong>, and <strong>NLP</strong> — not just to predict, but to <em>understand</em>.
         <br /><br />
-        I focus on building models that don’t just make predictions — they <em>understand</em>. From personalized AI chatbots to integrating chatbots into <strong>WEBSITES</strong>, I design tools that listen, learn, and respond smartly.
+        From personal AI assistants to full-stack web integrations with the <strong>MERN stack</strong>, I bring intelligence into real-world apps.
         <br /><br />
-        But I don’t stop at AI alone — I also bring it to life on the web. Using the <strong>MERN stack</strong>, I integrate these intelligent systems directly into full-stack applications, turning standalone models into real-world, user-ready experiences.
+        My dream? A project called <em>AY</em> — an AI designed to journey through space and unlock the secrets of the stars ✨.
         <br /><br />
-        What drives me? A vision for a future where applications don’t just work — they <em>think</em>.
-        <br /><br />
-        <strong>Dream Project - </strong>Project <em>AY</em>, a model which is designed to travel into the darkness of space among stars✨ and reveal the secrets of INTERSTELLAR distances.
-        <br></br>
-        <strong>Let’s build what’s next. ⚡</strong>(FUTURE)
+        <strong>Let’s build the future. ⚡</strong>
       </p>
+
     </div>
   )
 }
