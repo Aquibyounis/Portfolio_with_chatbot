@@ -61,8 +61,10 @@ const Skills = () => {
         <span className='tech_box'>
           <h2>DevOps & Cloud</h2>
           <div className="com">
-            <p className='com_p'>Docker(UnderCourse)</p>
             <p className='com_p'>AWS</p>
+            <p className='com_p'>EC2</p>
+            <p className='com_p'>S3</p>
+            <p className='com_p'>IAM</p>
           </div>
         </span>
 
