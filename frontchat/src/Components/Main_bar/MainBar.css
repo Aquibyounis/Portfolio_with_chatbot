@@ -63,6 +63,48 @@
     -webkit-background-clip: text;
     font-size: 1.8em;
 }
+.resume{
+  padding: 10px;
+  font-size: 1.5em;
+  border-radius: 50px;
+  transition-duration: 0.5s;
+  position: relative;
+  background-color: black;
+  text-decoration: none;
+  color: aliceblue;
+}
+.resume::after{
+  position: absolute;
+  content: '';
+  height: 100%;
+  width: 100%;
+  top: 50%;
+  left: 50%;
+  padding: 2.5%;
+  color: black;
+  transform: translate(-50%,-50%);
+  background:linear-gradient(45deg,rgb(20, 220, 20),cyan);
+  z-index: -1;
+  border-radius: inherit;
+}
+.resume::before{
+  position: absolute;
+  content: '';
+  height: 100%;
+  width: 100%;
+  top: 50%;
+  left: 50%;
+  padding: 2%;
+  color: black;
+  transform: translate(-50%,-50%);
+  background:linear-gradient(45deg,rgb(20, 220, 20),cyan);
+  z-index: -1;
+  border-radius: inherit;
+  filter: blur(100px);
+}
+.resume:hover{
+  cursor: pointer;
+}
 
 .img_p {
     width: 100%;
