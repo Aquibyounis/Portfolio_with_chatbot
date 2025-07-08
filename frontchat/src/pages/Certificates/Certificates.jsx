@@ -87,7 +87,7 @@ const certificateData = [
     img: cer5,
     alt: "AWS Foundations Badge",
     desc: `<strong style="color: cyan">Aws</strong> Cloud Foundations badge which helped me in gaining real time experience with <strong style="color: yellow">AWS LABS such as EC2, S3, VPC, IAM roles ,users, policies, Databases like RDS, Aurora and also Serverless deployments with Lambda</strong>`,
-    direction: "left",
+    direction: "right",
     type: "badge",
   },
 ];
