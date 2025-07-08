@@ -100,8 +100,8 @@ const Certificates = () => {
     <div className="certificates">
       <div className="inner_certificates">
         <div className="sidenav">
-          <h2 onClick={() => setCer("cer")}>Certificates</h2>
-          <h2 onClick={() => setCer("badge")}>Badges</h2>
+          <h2 onClick={() => setCer("cer")} className={cer==="cer" ? "y":"n"}>Certificates</h2>
+          <h2 onClick={() => setCer("badge")}  className={cer==="badge" ? "y":"n"}>Badges</h2>
         </div>
 
         {filteredData.map((item, index) => (
