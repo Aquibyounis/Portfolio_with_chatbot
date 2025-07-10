@@ -56,13 +56,22 @@
 }
 
 
-
+@media (max-width: 770px){
+    .navbar{
+        scale: 1.23;
+    }
+    .Link{
+        font-size: 1em;
+    }
+}
 
 @media (max-width:600px){
     .navbar{
-        width: 100svw;
+        width: 80svw;
         position: sticky;
         bottom: 2%;
+        left: 50%;
+        transform: translate(-10%);
     }
     .ul{
         background: linear-gradient(45deg,rgb(20, 33, 50),transparent);

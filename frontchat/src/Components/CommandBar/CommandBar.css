@@ -1,6 +1,6 @@
 .command-container {
   width: 70%;
-  margin: 80px auto;
+  margin: 0px auto;
   padding: 20px 30px;
   background-color: #e5ecf0;
   display: flex;
@@ -11,10 +11,7 @@
   border-top: 1px solid #0a5768;
   border-radius: 30px;
   box-shadow: 0px 0px 20px -5px cyan;
-  position: absolute;
   bottom: 0px;
-  left: 50%;
-  transform: translate(-50%);
 }
 .tag_h1{
   color: #6d6666;
@@ -70,7 +67,10 @@
   .command-input {
     font-size: 0.95em;
   }
-
+  .tag_h1 {
+    width: 60%;
+    font-size: 1.2em;
+  }
   .send-btn i {
     font-size: 1em;
   }

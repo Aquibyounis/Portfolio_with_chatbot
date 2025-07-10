@@ -72,6 +72,8 @@
   background-color: black;
   text-decoration: none;
   color: aliceblue;
+  font-weight: 600;
+  text-shadow: 0px 0px 5px rgb(0, 0, 0);
 }
 .resume::after{
   position: absolute;
@@ -121,9 +123,19 @@
 /* ===========================
    RESPONSIVENESS FOR MOBILE
 =========================== */
-@media (max-width: 768px) {
+
+@media (max-width: 1080px) {
+  .inner_main{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column-reverse;
+    padding-top: 5%;
+  }
+}
+@media (max-width: 770px) {
     .inner_main {
-        flex-direction: column;
+        flex-direction: column-reverse;
         align-items: center;
         justify-content: flex-start;
         padding: 2rem 1rem;
@@ -152,7 +164,7 @@
     }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 600px) {
   
   .inner_main {
     flex: none;
@@ -161,6 +173,7 @@
     justify-content: flex-start;
     padding: 1rem;
   }
+
 
   .right {
     order: 0;
@@ -193,6 +206,7 @@
 
   .ai_bot {
     font-size: 0.95em;
+    width: 90%;
   }
 
   .img_p {
