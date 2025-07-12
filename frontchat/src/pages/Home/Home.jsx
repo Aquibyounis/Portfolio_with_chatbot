@@ -11,7 +11,7 @@ import Skills from "../../Components/Skills/Skills.jsx";
 import Portfolios from "../../Components/Portfolios/Portfolios.jsx";
 import RippleEffect from "../../Components/RippleEffect/RippleEffect.jsx";
 import Dashboard from '../../Components/dashboard/dashboard.jsx';
-import MiniNav from "../../Components/MiniNav/MiniNav.jsx"; // ✅ New import
+import Github from '../../Components/Github/Github.jsx'; // ✅ New import
 
 import "./Home.css";
 import Education from '../../Components/Education/Education.jsx';
@@ -74,7 +74,6 @@ const Home = () => {
 
       <RippleEffect />
 
-      <MiniNav /> {/* ✅ Mini vertical navbar */}
     </div>
   );
 };

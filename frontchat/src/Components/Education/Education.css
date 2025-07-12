@@ -40,13 +40,13 @@
 .edu-card,
 .hobbies-card {
   margin-bottom: 1%;
-  background: linear-gradient(45deg, #345b875b, rgba(0, 0, 0, 0.372));
+  background: radial-gradient( #345b875b 10%, rgba(0, 0, 0, 0.372));
   backdrop-filter: blur(50px);
   height: fit-content;
   padding: 0.5em;
   width: 40%;
   border-radius: 16px;
-  box-shadow: 0px 0px 50px -5px #377e9486 0px 0px 100px 0px #ff00ff inset;
+  box-shadow: -10px 0px 10px -5px rgba(0, 255, 255, 0.315) inset;
   transition: transform 0.3s ease;
   border-left: 5px solid #ff00ff;
 }

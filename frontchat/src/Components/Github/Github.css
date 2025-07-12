@@ -1,0 +1,18 @@
+.bg-video {
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  z-index: -1;
+  opacity: 1;
+  scale: 1.2; /* slight zoom for energy effect */
+  transition: opacity 0.5s ease-in-out, scale 0.5s ease-in-out;
+  filter: brightness(1.1) contrast(1.1);
+}
+.hi{
+    font-size: 2em;
+
+    color: antiquewhite;
+}
