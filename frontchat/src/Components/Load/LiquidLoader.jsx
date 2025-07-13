@@ -18,10 +18,12 @@ const LiquidLoader = () => {
         <div
           className="liquid"
           style={{ height: `${(100 - count)}%` }} // Liquid fill effect
-        ></div>
+        >
+        </div>
       </div>
       <h2 className="loader-text">
-        {count > 1 ? `Launching in ${count}...` : "...Ready to Launch👩🏻‍🚀🚀..."}
+        {count > 1 ? `Launching in ${count}...` : "Ready to Launch👩🏻‍🚀🚀"}
+          <h1>RE FUELING</h1>
       </h2>
     </div>
   );
