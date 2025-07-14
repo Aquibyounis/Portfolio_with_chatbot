@@ -55,7 +55,6 @@
 .ai_bot {
     font-size: 1.1em;
     color: aliceblue;
-    padding: 1em;
 }
 
 .ai {
@@ -132,11 +131,12 @@
     align-items: center;
     justify-content: center;
     flex-direction: column-reverse;
-    padding-top: 5%;
+    padding-top: 2%;
   }
 }
 @media (max-width: 770px) {
     .inner_main {
+        display: flex;
         flex-direction: column-reverse;
         align-items: center;
         justify-content: flex-start;
@@ -169,11 +169,11 @@
 @media (max-width: 600px) {
   
   .inner_main {
-    flex: none;
-    flex-direction: column;
+    display: flex;
+    flex-direction: row;
     align-items: center;
     justify-content: flex-start;
-    padding: 3rem;
+    padding: 1rem;
   }
 
 

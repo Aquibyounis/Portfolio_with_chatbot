@@ -12,12 +12,12 @@ import {
 
 const data = [
   { skill: 'Python', knowledge: 60 },
-  { skill: 'LangChain', knowledge: 40 },
   { skill: 'ML/DL/NLP', knowledge: 50 },
-  { skill: 'ChromaDB', knowledge: 30 },
+  { skill: 'LangChain', knowledge: 60 },
+  { skill: 'ChromaDB', knowledge: 45 },
   { skill: 'HuggingFace', knowledge: 20 },
   { skill: 'GITHUB', knowledge: 90 },
-  { skill: 'AWS', knowledge: 60 },
+  { skill: 'AWS EC2', knowledge: 70 },
   { skill: 'MongoDB', knowledge: 50 },
   { skill: 'SQL', knowledge: 50 },
   { skill: 'ReactJS', knowledge: 90 },
