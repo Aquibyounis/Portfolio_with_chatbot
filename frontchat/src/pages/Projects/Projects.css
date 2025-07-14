@@ -102,24 +102,15 @@ body {
   min-height: 25svh;
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  align-items: start;
+  text-align: left;
   justify-content: space-around;
   cursor: grab;
 }
 .project-card:active {
   cursor: grabbing;
 }
-.project-card::before {
-  content: "";
-  position: absolute;
-  top: -50%;
-  left: -50%;
-  width: 200%;
-  height: 200%;
-  background: linear-gradient(45deg, var(--accent) 10%, rgb(251, 0, 251));
-  z-index: 0;
-  opacity: 0.1;
-}
+
 
 .project-card:hover {
   transform: translateY(-8px);
@@ -127,11 +118,12 @@ body {
 }
 
 .project-card h3 {
-  font-size: 1.5rem;
-  margin-bottom: 0.5rem;
+  text-align: right;
+  font-size: 1.9rem;
+  margin-bottom: 1rem;
   position: relative;
   z-index: 1;
-  color: #ddffff;
+  color: white;
 }
 
 .project-desc,
@@ -150,7 +142,7 @@ body {
 .project-tech {
   font-size: 0.9rem;
   margin-bottom: 1rem;
-  color: #d6d6d6;
+  color: aliceblue;
 }
 
 .project-link {

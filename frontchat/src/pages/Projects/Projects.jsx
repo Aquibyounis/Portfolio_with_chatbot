@@ -21,30 +21,34 @@ const initialProjects = [
   {
     id: '1',
     title: "Commander NOVA Virtual Astronaut",
-    description: "A astronaut which in virtual and help as co-pilot, FUTURISTIC",
+    description: "An Virtual AI astronaut which assist in space exploration, FUTURISTIC",
     tech: "Langchain, LLM, Ollama, HuggingFace, ChromaDB",
-    link: "https://github.com/Aquibyounis/VirtualAstronaut"
+    link: "https://github.com/Aquibyounis/VirtualAstronaut",
+    role: "implemented the LLM and Langchain part, integrated with Ollama and ChromaDB"
   },
   {
     id: '2',
     title: "Smart Notes – AI Summarizer",
     description: "AI-powered notes app that summarizes text using NLP and Transformer models.",
     tech: "Python, Hugging Face, Flask",
-    link: "https://github.com/Aquibyounis/Smart_Notes_AI"
+    link: "https://github.com/Aquibyounis/Smart_Notes_AI",
+    role: "implemented the LLM and Langchain part, integrated with Ollama and ChromaDB"
   },
   {
     id: '3',
     title: "Weather Detection using YOLO",
     description: "Detects weather conditions in images using YOLO object detection.",
     tech: "YOLOv8,Google Colab, Python",
-    link: "https://drive.google.com/drive/folders/12Hhw37UvApFXi1A5-Z6bDI8NH2ZUJyq5?usp=sharing"
+    link: "https://drive.google.com/drive/folders/12Hhw37UvApFXi1A5-Z6bDI8NH2ZUJyq5?usp=sharing",
+    role: "implemented the LLM and Langchain part, integrated with Ollama and ChromaDB"
   },
   {
     id: '4',
     title: "ShopEZ – Full Stack E-Commerce",
     description: "A modern full-stack shopping app with authentication, cart and built on a team of 4 in SmartBridge",
     tech: "React, Node.js, Express, MongoDB",
-    link: "https://github.com/Aquibyounis/Shop-EZ"
+    link: "https://github.com/Aquibyounis/Shop-EZ",
+    role: "implemented the LLM and Langchain part, integrated with Ollama and ChromaDB"
   }
 ];
 
@@ -68,6 +72,7 @@ function SortableItem({ project }) {
       <h3 className="project-title">{project.title}</h3>
       <p className="project-desc">{project.description}</p>
       <p className="project-tech">🔧 {project.tech}</p>
+      <p className="project-tech">🔴 {project.role}</p>
       <a href={project.link} target="_blank" rel="noopener noreferrer" className="project-link">
         🔗 View Project
       </a>

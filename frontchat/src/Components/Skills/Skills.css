@@ -42,7 +42,7 @@
   align-items: center;
   transition: all 0.5s ease;
   box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
-  height: 25svh;
+  height: fit-content+10svh;
 }
 
 .tech_box:hover {
@@ -90,7 +90,6 @@
   }
 
   .tech_box {
-    border: none;
     border-radius: 20px;
     padding: 15px;
   }
