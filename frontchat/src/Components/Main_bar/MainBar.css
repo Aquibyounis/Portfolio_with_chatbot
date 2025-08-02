@@ -45,7 +45,11 @@
     justify-content: center;
     padding: 1.5rem;
 }
-
+.bold{
+  background: linear-gradient(90deg, #19cc55, rgba(0, 255, 255, 0.986));
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+}
 .h1 {
     font-size: 3em;
     line-height: 1.2;
@@ -58,7 +62,7 @@
 }
 
 .ai {
-    background: linear-gradient(90deg, #065cb8, rgba(178, 178, 178, 0.986));
+    background: linear-gradient(90deg, #00ffee, rgba(178, 178, 178, 0.986));
     -webkit-text-fill-color: transparent;
     -webkit-background-clip: text;
     font-size: 1.8em;
@@ -112,15 +116,60 @@
     width: 100%;
     max-width: 300px;
     height: auto;
-    box-shadow: 0px 0px 15px 0px rgb(171, 206, 225);
     border-radius: 50%;
-    scale: 1.3;
     object-fit: cover;
     transition-duration: 0.7s;
-  }
-.img_p:hover{    
-  filter: drop-shadow(0px 15px 15px rgb(5, 109, 150));
+    position: relative;;
 }
+.img-wrapper {
+    position: relative;
+    width: 300px;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+}
+
+.img_p {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+@property --deg {
+    syntax: '<angle>';
+    inherits: false;
+    initial-value: 0deg;
+}
+
+.img-wrapper::before,
+.img-wrapper::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: conic-gradient(
+        from var(--deg) at center,
+        #00d5ff,
+        #002aff,
+        #4ae0c4
+    );
+    height: 100%;
+    width: 100%;
+    border-radius: inherit;
+    z-index: -1;
+    filter: blur(10px);
+    animation: auto-rotate 3s linear infinite;
+}
+
+.img-wrapper::before {
+    filter: blur(30px);
+}
+
+@keyframes auto-rotate {
+    to {
+        --deg: 360deg;
+    }
+}
+
 /* ===========================
    RESPONSIVENESS FOR MOBILE
 =========================== */
@@ -219,6 +268,14 @@
     width: 100%;
     height: auto;
     scale: 1;
-    box-shadow: 0px 10px 15px 0px rgb(5, 115, 174);
+  }
+  .img-wrapper {
+    width: 180px;
+    aspect-ratio: 1/1;
+  }
+  .img-wrapper::after,
+  .img-wrapper::before {
+    width: 100%;
+    height: 100%;
   }
 }
