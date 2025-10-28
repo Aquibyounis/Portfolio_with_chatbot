@@ -79,7 +79,7 @@ const Ai = () => {
     } catch (error) {
       setMessages((prev) => [
         ...prev,
-        { sender: "bot", text: "Sumimasen, My Model isn't Hosted yet 🥲." },
+        { sender: "bot", text: "Sorry, Free AWS tier time has been completed🥲." },
       ]);
       setIsTyping(false);
     }
