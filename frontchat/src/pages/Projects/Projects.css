@@ -22,12 +22,8 @@ body {
 }
 
 @keyframes fadein {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
+  from { opacity: 0; }
+  to { opacity: 1; }
 }
 
 .section-title {
@@ -42,8 +38,7 @@ body {
   transform: translate(-50%);
 }
 .section-title::before {
-  content: '🪐';
-  -webkit-background-clip: text;
+  content: '🪐 ';
   -webkit-text-fill-color: #00fff7;
 }
 
@@ -58,9 +53,9 @@ body {
 
 .projects-grid2 {
   display: grid;
-  grid-template-columns: 1fr;
+  grid-template-columns:1fr;
   gap: 2rem;
-  max-width: 90svw;
+  max-width: 70svw;
   margin: 0 auto;
   padding: 0 1rem;
 }
@@ -90,59 +85,94 @@ body {
   opacity: 0.6;
 }
 
+/* === Futuristic Neon Effects === */
+.neon-text {
+  color: #00fff7;
+  letter-spacing: 1px;
+}
+
 .project-card {
-  background: var(--card-color);
+  background: linear-gradient(135deg, rgba(0, 255, 255, 0.1), rgba(255, 0, 255, 0.05));
+  border: 1px solid rgba(0, 255, 255, 0.2);
   border-radius: 1rem;
   padding: 2rem;
   position: relative;
   overflow: hidden;
-  background: linear-gradient(-45deg, rgb(49, 91, 106), rgb(0, 0, 0));
   box-shadow: 0 0 20px rgba(0, 255, 255, 0.1);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition: all 0.4s ease;
   min-height: 25svh;
   display: flex;
   flex-direction: column;
   align-items: start;
   text-align: left;
   justify-content: space-around;
+  gap: 10px;
   cursor: grab;
-}
-.project-card:active {
-  cursor: grabbing;
+  backdrop-filter: blur(10px);
 }
 
+.project-card::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  animation: rotate 6s linear infinite;
+  z-index: 0;
+}
+
+@keyframes rotate {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
 
 .project-card:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 0 25px rgba(0, 255, 255, 0.749);
-}
-
-.project-card h3 {
-  text-align: right;
-  font-size: 1.9rem;
-  margin-bottom: 1rem;
-  position: relative;
-  z-index: 1;
-  color: white;
-}
-
-.project-desc,
-.project-tech,
-.project-link {
-  position: relative;
-  z-index: 1;
+  transform: translateY(-6px) scale(1.02);
+  box-shadow: 0 0 30px rgba(0, 255, 255, 0.6);
 }
 
 .project-desc {
   font-size: 1rem;
   margin-bottom: 1rem;
   color: #cccccc;
+  position: relative;
+  z-index: 2;
 }
 
-.project-tech {
+
+/* === Futuristic Tech Pills === */
+.tech-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  z-index: 2;
+}
+
+.tech-pill {
+  background: rgba(0, 255, 255, 0.15);
+  border: 1px solid rgba(0, 255, 255, 0.4);
+  color:cyan;
+  font-size: 0.8rem;
+  padding: 0.4rem 0.8rem;
+  border-radius: 50px;
+  box-shadow: 0 0 8px rgba(0, 255, 255, 0.4);
+  transition: all 0.3s ease;
+  backdrop-filter: blur(3px);
+}
+
+.tech-pill:hover {
+  transform: scale(1.08);
+  box-shadow: 0 0 12px rgba(0, 255, 255, 0.8);
+  background: rgba(0, 255, 255, 0.25);
+}
+
+.project-role {
   font-size: 0.9rem;
-  margin-bottom: 1rem;
-  color: aliceblue;
+  margin-top: 0.8rem;
+  color: #ff89ff;
+  position: relative;
+  z-index: 2;
 }
 
 .project-link {
@@ -150,11 +180,14 @@ body {
   color: var(--accent);
   font-weight: bold;
   transition: color 0.2s ease;
+  position: relative;
+  z-index: 2;
 }
 
 .project-link:hover {
   color: #ffffff;
 }
+
 
 /* ===================== RESPONSIVE ===================== */
 @media (max-width: 1024px) {
@@ -176,34 +209,27 @@ body {
   .projects-section {
     padding: 2rem 1rem;
   }
-
   .section-title {
     font-size: 1.8rem;
     margin-bottom: 2rem;
   }
-
   .symbol {
     font-size: 1em;
     margin-right: 1em;
   }
-
   .project-card {
     padding: 1.5rem;
     min-height: 30svh;
   }
-
   .project-card h3 {
     font-size: 1.2rem;
   }
-
   .project-desc {
     font-size: 0.9rem;
   }
-
-  .project-tech {
-    font-size: 0.8rem;
+  .tech-pill {
+    font-size: 0.75rem;
   }
-
   .project-link {
     font-size: 0.9rem;
   }

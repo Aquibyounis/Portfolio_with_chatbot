@@ -20,62 +20,83 @@ import { CSS } from '@dnd-kit/utilities';
 const initialProjects = [
   {
     id: '1',
-    title: "Commander NOVA Virtual Astronaut",
-    description: "An Virtual AI astronaut which assist in space exploration, FUTURISTIC",
-    tech: "Langchain, LLM, Ollama, HuggingFace, ChromaDB",
-    link: "https://github.com/Aquibyounis/VirtualAstronaut",
-    role: "implemented the LLM and Langchain part, integrated with Ollama and ChromaDB"
+    title: "Peanut 2.0",
+    description: "A Multi-Agentic RAG built using custom MCP and tools.",
+    tech: "RAG, LangGraph, Agents, Google Cloud Service, Memory",
+    link: "",
+    role: "Currently Under Development...."
   },
   {
     id: '2',
+    title: "Fresher Nav",
+    description: "A virtual AI assistant for college students (VIT-AP).",
+    tech: "RAG, Langchain, LLM, Ollama, ChromaDB",
+    link: "https://github.com/Aquibyounis/VIT_AP_COMPASS_MODEL2",
+    role: "Implemented RAG model with vectorDB, created ChromaDB vectors on custom dataset."
+  },
+  {
+    id: '3',
+    title: "Commander NOVA Virtual Astronaut",
+    description: "A virtual AI astronaut assisting in futuristic space exploration.",
+    tech: "Langchain, LLM, Ollama, HuggingFace, ChromaDB",
+    link: "https://github.com/Aquibyounis/VirtualAstronaut",
+    role: "Implemented LLM + Langchain, integrated with Ollama and ChromaDB."
+  },
+  {
+    id: '4',
     title: "Smart Notes – AI Summarizer",
     description: "AI-powered notes app that summarizes text using NLP and Transformer models.",
     tech: "Python, Hugging Face, Flask",
     link: "https://github.com/Aquibyounis/Smart_Notes_AI",
-    role: "implemented the LLM and Langchain part, integrated with Ollama and ChromaDB"
+    role: "Developed core summarization logic using Transformer models."
   },
   {
-    id: '3',
+    id: '5',
     title: "Weather Detection using YOLO",
     description: "Detects weather conditions in images using YOLO object detection.",
-    tech: "YOLOv8,Google Colab, Python",
+    tech: "YOLOv8, Google Colab, Python",
     link: "https://drive.google.com/drive/folders/12Hhw37UvApFXi1A5-Z6bDI8NH2ZUJyq5?usp=sharing",
-    role: "implemented the LLM and Langchain part, integrated with Ollama and ChromaDB"
+    role: "Built model and fine-tuned it for weather classification."
   },
   {
-    id: '4',
+    id: '6',
     title: "ShopEZ – Full Stack E-Commerce",
-    description: "A modern full-stack shopping app with authentication, cart and built on a team of 4 in SmartBridge",
+    description: "Modern full-stack shopping app built in SmartBridge team.",
     tech: "React, Node.js, Express, MongoDB",
     link: "https://github.com/Aquibyounis/Shop-EZ",
-    role: "implemented the LLM and Langchain part, integrated with Ollama and ChromaDB"
+    role: "Built UI using React JS. Assisted team in connection of database with backend."
   }
 ];
 
 function SortableItem({ project }) {
-  const {
-    attributes,
-    listeners,
-    setNodeRef,
-    transform,
-    transition
-  } = useSortable({ id: project.id });
+  const { attributes, listeners, setNodeRef, transform, transition } = useSortable({ id: project.id });
 
   const style = {
     transform: CSS.Transform.toString(transform),
     transition
   };
 
+  const techList = project.tech.split(',').map(t => t.trim());
+
   return (
-    <div className="project-card" ref={setNodeRef} style={style} {...attributes} {...listeners}>
+    <div className="project-card"  ref={setNodeRef} style={style} {...attributes} {...listeners}>
       <i className="fa-solid fa-grip-vertical dots"></i>
-      <h3 className="project-title">{project.title}</h3>
+      <h3 className="project-title neon-text">{project.title}</h3>
       <p className="project-desc">{project.description}</p>
-      <p className="project-tech">🔧 {project.tech}</p>
-      <p className="project-tech">🔴 {project.role}</p>
-      <a href={project.link} target="_blank" rel="noopener noreferrer" className="project-link">
-        🔗 View Project
-      </a>
+
+      <div className="tech-container">
+        {techList.map((tech, index) => (
+          <span key={index} className="tech-pill">{tech}</span>
+        ))}
+      </div>
+
+      <p className="project-role"><i class="fa-solid fa-comments" style={{color:"cyan"}}></i> {project.role}</p>
+
+      {project.link && (
+        <a href={project.link} target="_blank" rel="noopener noreferrer" className="project-link">
+          🔗 View Project
+        </a>
+      )}
     </div>
   );
 }
@@ -111,15 +132,8 @@ const Projects = () => {
         )}
       </div>
 
-      <DndContext
-        sensors={sensors}
-        collisionDetection={closestCenter}
-        onDragEnd={handleDragEnd}
-      >
-        <SortableContext
-          items={projects.map(p => p.id)}
-          strategy={verticalListSortingStrategy}
-        >
+      <DndContext sensors={sensors} collisionDetection={closestCenter} onDragEnd={handleDragEnd}>
+        <SortableContext items={projects.map(p => p.id)} strategy={verticalListSortingStrategy}>
           <div className={symbol === "CUT" ? "projects-grid" : "projects-grid2"}>
             {projects.map((project) => (
               <SortableItem key={project.id} project={project} />
