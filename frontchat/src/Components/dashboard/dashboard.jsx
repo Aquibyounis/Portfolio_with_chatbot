@@ -11,17 +11,19 @@ import {
 } from 'recharts';
 
 const data = [
-  { skill: 'Python', knowledge: 60 },
-  { skill: 'ML/DL/NLP', knowledge: 50 },
-  { skill: 'LangChain', knowledge: 60 },
-  { skill: 'ChromaDB', knowledge: 45 },
-  { skill: 'HuggingFace', knowledge: 20 },
+  { skill: 'Python', knowledge: 75 },
+  { skill: 'ML/DL/NLP', knowledge: 65 },
+  { skill: 'LangChain', knowledge: 75 },
+  { skill: 'ChromaDB', knowledge: 60 },
+  { skill: 'HuggingFace', knowledge: 50 },
+  { skill: 'n8n', knowledge: 75 },
+  { skill: 'Automation', knowledge: 70 },
   { skill: 'GITHUB', knowledge: 90 },
   { skill: 'AWS EC2', knowledge: 70 },
-  { skill: 'MongoDB', knowledge: 50 },
-  { skill: 'SQL', knowledge: 50 },
+  { skill: 'MongoDB', knowledge: 80 },
+  { skill: 'SQL', knowledge: 75 },
   { skill: 'ReactJS', knowledge: 90 },
-  { skill: 'Java', knowledge: 70 },
+  { skill: 'Java', knowledge: 75 },
 ];
 
 const Dashboard = () => {
@@ -40,10 +42,10 @@ const Dashboard = () => {
             tick={{
               fill: '#051822FF',
               fontSize: 12,
-              fontWeight: '500',
+              fontWeight: '600',
             }}
             interval={0}
-            angle={-35}
+            angle={-55}
             textAnchor="end"
           />
           

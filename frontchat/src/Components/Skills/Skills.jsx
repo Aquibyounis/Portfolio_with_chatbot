@@ -20,6 +20,15 @@ const Skills = () => {
           </div>
         </span>
 
+        <span className='tech_box'>
+          <h2>AGENTIC AI</h2>
+          <div className="com">
+            <p className='com_p'>n8n</p>
+            <p className='com_p'>RAG</p>
+            <p className='com_p'>Multi Agentic RAG</p>
+          </div>
+        </span>
+
         {/* AI & ML First */}
         <span className='tech_box'>
           <h2>LLM and GenAI</h2>
