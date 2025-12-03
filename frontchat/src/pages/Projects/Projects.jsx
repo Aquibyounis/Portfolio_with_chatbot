@@ -20,6 +20,14 @@ import { CSS } from '@dnd-kit/utilities';
 const initialProjects = [
   {
     id: '1',
+    title: "Autonomous QA agent for Automating testing of webpages",
+    description: "A Agentic RAG pipeline with ChromaDB built for Automation of testing html web pages.",
+    tech: "RAG pipeline, Langchain, Agents, VectorDB, AWS, EC2, Streamlit",
+    link: "http://aquibyounisoceanai.duckdns.org/",
+    role: "Created RAG + Streamlit + FastAPI pipeline integrated with chromadb and hosted on EC2 instance on AWS. give some supported docs and html code then it will generate test cases and selenium code for testing test cases."
+  },
+  {
+    id: '2',
     title: "Peanut 2.0",
     description: "A Multi-Agentic RAG built using custom MCP and tools.",
     tech: "RAG, LangGraph, Agents, Google Cloud Service, Memory",
@@ -27,7 +35,7 @@ const initialProjects = [
     role: "Currently Under Development...."
   },
   {
-    id: '2',
+    id: '3',
     title: "Fresher Nav",
     description: "A virtual AI assistant for college students (VIT-AP).",
     tech: "RAG, Langchain, LLM, Ollama, ChromaDB",
@@ -35,7 +43,7 @@ const initialProjects = [
     role: "Implemented RAG model with vectorDB, created ChromaDB vectors on custom dataset."
   },
   {
-    id: '3',
+    id: '4',
     title: "Commander NOVA Virtual Astronaut",
     description: "A virtual AI astronaut assisting in futuristic space exploration.",
     tech: "Langchain, LLM, Ollama, HuggingFace, ChromaDB",
@@ -43,7 +51,7 @@ const initialProjects = [
     role: "Implemented LLM + Langchain, integrated with Ollama and ChromaDB."
   },
   {
-    id: '4',
+    id: '5',
     title: "Smart Notes – AI Summarizer",
     description: "AI-powered notes app that summarizes text using NLP and Transformer models.",
     tech: "Python, Hugging Face, Flask",
@@ -51,7 +59,7 @@ const initialProjects = [
     role: "Developed core summarization logic using Transformer models."
   },
   {
-    id: '5',
+    id: '6',
     title: "Weather Detection using YOLO",
     description: "Detects weather conditions in images using YOLO object detection.",
     tech: "YOLOv8, Google Colab, Python",
@@ -59,7 +67,7 @@ const initialProjects = [
     role: "Built model and fine-tuned it for weather classification."
   },
   {
-    id: '6',
+    id: '7',
     title: "ShopEZ – Full Stack E-Commerce",
     description: "Modern full-stack shopping app built in SmartBridge team.",
     tech: "React, Node.js, Express, MongoDB",
