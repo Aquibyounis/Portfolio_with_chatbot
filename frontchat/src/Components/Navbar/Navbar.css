@@ -70,10 +70,28 @@
 
 @media (max-width: 600px) {
     .navbar {
-        width: 100svw;
-        position: fixed;
-        bottom: 2%;
-    }
+    width: 100svw;
+    position: fixed;
+    /* 1. Place it where you want it to be when fully visible */
+    bottom: 2%; 
+    left: 0;
+
+    /* 2. Push it down so only the top is peeking (Hidden State) */
+    transform: translateY(75%); 
+    
+    /* 3. The Liquid Physics (Bouncy Spring Effect) */
+    /* This curve pulls back slightly and then snaps into place */
+    transition: transform 0.6s cubic-bezier(0.68, -0.6, 0.32, 1.6);
+    
+    /* Optional: Fade it slightly when hidden */
+    opacity: 0.7; 
+}
+
+.navbar:hover {
+    /* 4. Bring it back to its natural position (Visible State) */
+    transform: translateY(0);
+    opacity: 1;
+}
     .ul {
         background: linear-gradient(45deg, rgb(20, 33, 50), transparent);
         width: 70%;
