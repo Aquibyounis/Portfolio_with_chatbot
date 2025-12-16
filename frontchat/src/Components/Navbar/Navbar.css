@@ -73,29 +73,33 @@
     width: 100svw;
     position: fixed;
     /* 1. Place it where you want it to be when fully visible */
-    bottom: 2%; 
+    bottom: 0%; 
     left: 0;
 
     /* 2. Push it down so only the top is peeking (Hidden State) */
-    transform: translateY(75%); 
+    transform: translateY(50%); 
     
     /* 3. The Liquid Physics (Bouncy Spring Effect) */
     /* This curve pulls back slightly and then snaps into place */
     transition: transform 0.6s cubic-bezier(0.68, -0.6, 0.32, 1.6);
     
     /* Optional: Fade it slightly when hidden */
-    opacity: 0.7; 
-}
+    }
 
-.navbar:hover {
-    /* 4. Bring it back to its natural position (Visible State) */
-    transform: translateY(0);
-    opacity: 1;
-}
+    .navbar:hover {
+        /* 4. Bring it back to its natural position (Visible State) */
+        transform: translateY(0);
+    }
     .ul {
         background: linear-gradient(45deg, rgb(20, 33, 50), transparent);
         width: 70%;
         height: 90%;
+        border-radius: 25px;
+        border-bottom-left-radius: 0px;
+        border-bottom-right-radius: 0px;
+    }
+    .floating-indicator{
+        border-radius: 25px;
     }
     .Link {
         color: rgb(202, 210, 216);
@@ -105,5 +109,25 @@
         text-align: center;
         gap: 2px;
         width: 100px;
+    }
+    .Link {
+        pointer-events: none;
+        
+        /* Keep your existing styling */
+        color: rgb(202, 210, 216);
+        height: 70%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column-reverse;
+        background: transparent;
+        font-size: 0.65em;
+        text-align: center;
+        width: 100px;
+    }
+
+    /* 2. ONLY when navbar is open, allow links to be clicked */
+    .navbar:hover .Link {
+        pointer-events: auto;
     }
 }
