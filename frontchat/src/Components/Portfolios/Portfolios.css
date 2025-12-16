@@ -1,7 +1,6 @@
 .portfolio-section {
   padding: 60px 20px;
   text-align: center;
-  background-color: #0a0a0a;
   color: #ffffff;
 }
 
@@ -31,4 +30,10 @@
 .portfolio-card:hover {
   transform: scale(1.05);
   box-shadow: 0 0 20px cyan;
+}
+
+@media (max-width:600px) {
+  .portfolio-section{
+    margin-bottom: 50px;
+  }
 }

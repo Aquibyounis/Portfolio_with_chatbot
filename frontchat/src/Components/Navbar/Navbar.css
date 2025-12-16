@@ -1,28 +1,42 @@
-.navbar{
-    color: aliceblue;
+.navbar {
     height: 8svh;
     width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
-    color: rgb(255, 255, 255);
     position: fixed;
     z-index: 100;
 }
-.ul{
+
+.ul {
+    position: relative; /* Essential for positioning the floating indicator */
     backdrop-filter: blur(50px);
     padding: 5px;
     border-radius: 55px;
     width: 70%;
+    height: 90%;
     list-style: none;
     display: flex;
     align-items: center;
     justify-content: space-evenly;
-    box-shadow:0px 0px 20px -5px rgb(0, 0, 0) inset, 0px 0px 10px -5px white inset;
-    transition-duration: 0.5s;
-    
+    box-shadow: 0px 0px 20px -5px rgb(0, 0, 0) inset, 0px 0px 10px -5px white inset;
+    background-color: rgba(162, 185, 216, 0.181);
 }
-.Link{
+
+/* The new sliding liquid background */
+.floating-indicator {
+    position: absolute;
+    height: 85%; /* Slightly smaller than container for looks */
+    top: 50%;
+    transform: translateY(-50%);
+    background: linear-gradient(45deg, rgba(255, 255, 255, 0.523), rgb(27, 59, 85));
+    border-radius: 50px;
+    z-index: 0; /* Behind the text */
+    transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1); /* "Fluid" easing */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.Link {
     text-shadow: 0px 0px 5px rgb(0, 0, 0);
     padding: 1%;
     transition-duration: 0.2s;
@@ -32,64 +46,46 @@
     color: rgb(231, 239, 245);
     text-decoration: none;
     border-radius: 50px;
-    position: relative;
-    text-decoration: none;
     font-weight: 600;
+    z-index: 1; /* Must be above the indicator */
+    display: flex;
+    align-items: center;
+    gap: 8px;
 }
 
+/* Remove the old ::after effects */
 .Link::after {
-    content: "";
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    width: 0%;
-    height: 100%;
-    transform: translate(-50%,-50%);
-    z-index: -1;
-    background: linear-gradient(45deg,rgba(255, 255, 255, 0.523),rgb(27, 59, 85));
-    transition: width 0.3s ease-in-out;
-    border-radius: 50px;
+    display: none;
 }
 
-.Link.active::after {
-    width: 100%;
-}
-
-
-@media (max-width: 770px){
-    .navbar{
+/* Responsive Styles */
+@media (max-width: 770px) {
+    .navbar {
         scale: 1.23;
     }
-    .Link{
+    .Link {
         font-size: 1em;
     }
 }
 
-@media (max-width:600px){
-    .navbar{
-        width: 80svw;
-        position: sticky;
+@media (max-width: 600px) {
+    .navbar {
+        width: 100svw;
+        position: fixed;
         bottom: 2%;
-        left: 50%;
-        transform: translate(-10%);
     }
-    .ul{
-        background: linear-gradient(45deg,rgb(20, 33, 50),transparent);
-        width: 90%;
-        height: 100%;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
+    .ul {
+        background: linear-gradient(45deg, rgb(20, 33, 50), transparent);
+        width: 70%;
+        height: 90%;
     }
-    .Link{
+    .Link {
         color: rgb(202, 210, 216);
         height: 70%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
         flex-direction: column-reverse;
-        background: transparent;
         font-size: 0.65em;
         text-align: center;
+        gap: 2px;
+        width: 100px;
     }
 }

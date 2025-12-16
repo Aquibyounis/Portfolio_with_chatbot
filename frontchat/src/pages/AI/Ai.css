@@ -145,7 +145,7 @@
   font-weight: 600;
   font-size: 1rem;
   cursor: pointer;
-  transition: background-color 0.3s ease;
+  transition: background-color 0.5s ease;
   height: max-content;
 }
 
@@ -180,7 +180,13 @@
       height: 130%;
     }
     .chat-container{
+      height: 100svh;
+      border-radius: 75px;
       padding-top: 0px;
-      padding-bottom: 2em;
+      padding-bottom: 6em;
+    }
+    .send-btn{
+      background: black;
+      border-radius: 40px;
     }
 }
