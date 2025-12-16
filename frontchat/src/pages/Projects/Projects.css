@@ -205,9 +205,10 @@ body {
   }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 600px) {
   .projects-section {
     padding: 2rem 1rem;
+    margin-bottom: 100px;
   }
   .section-title {
     font-size: 1.8rem;
