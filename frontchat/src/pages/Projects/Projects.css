@@ -87,18 +87,16 @@ body {
 
 /* === Futuristic Neon Effects === */
 .neon-text {
-  color: #00fff7;
+  color: #fefefe;
   letter-spacing: 1px;
 }
 
 .project-card {
-  background: linear-gradient(135deg, rgba(0, 255, 255, 0.1), rgba(255, 0, 255, 0.05));
-  border: 1px solid rgba(0, 255, 255, 0.2);
+  background: radial-gradient(#161f31,#313d56);
   border-radius: 1rem;
   padding: 2rem;
   position: relative;
   overflow: hidden;
-  box-shadow: 0 0 20px rgba(0, 255, 255, 0.1);
   transition: all 0.4s ease;
   min-height: 25svh;
   display: flex;
@@ -129,7 +127,7 @@ body {
 
 .project-card:hover {
   transform: translateY(-6px) scale(1.02);
-  box-shadow: 0 0 30px rgba(0, 255, 255, 0.6);
+  box-shadow: 0 0 30px rgba(61, 61, 61, 0.6);
 }
 
 .project-desc {
@@ -150,13 +148,10 @@ body {
 }
 
 .tech-pill {
-  background: rgba(0, 255, 255, 0.15);
-  border: 1px solid rgba(0, 255, 255, 0.4);
-  color:cyan;
+  background: rgba(78, 80, 80, 0.833);
   font-size: 0.8rem;
   padding: 0.4rem 0.8rem;
   border-radius: 50px;
-  box-shadow: 0 0 8px rgba(0, 255, 255, 0.4);
   transition: all 0.3s ease;
   backdrop-filter: blur(3px);
 }
@@ -164,13 +159,13 @@ body {
 .tech-pill:hover {
   transform: scale(1.08);
   box-shadow: 0 0 12px rgba(0, 255, 255, 0.8);
-  background: rgba(0, 255, 255, 0.25);
+  background: rgba(72, 135, 135, 0.25);
 }
 
 .project-role {
   font-size: 0.9rem;
   margin-top: 0.8rem;
-  color: #ff89ff;
+  color: #78cde9;
   position: relative;
   z-index: 2;
 }

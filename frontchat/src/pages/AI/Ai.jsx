@@ -127,7 +127,7 @@ const Ai = () => {
           onKeyDown={handleKeyDown}
         />
         <button className="send-btn" onClick={sendMessage}>
-          Send
+          <i class="fa-solid fa-arrow-right"></i>
         </button>
       </div>
     </div>

@@ -3,7 +3,7 @@
   padding-top: 30px; /* space for fixed navbar */
   width: 50vw;
   margin: 0 auto;
-  height: 90vh;
+  height: 95vh;
   display: flex;
   flex-direction: column;
   color: white;
@@ -115,6 +115,14 @@
   display: flex;
   padding: 15px 30px;
   align-items: center;
+  justify-content: space-between;
+  background-color: #f0f1f1;
+  border-radius: 50px;
+  width: 90%;
+  height: 9%;
+  position: relative;
+  left: 50%;
+  transform: translate(-50%,-15%);
 }
 
 /* Textarea input */
@@ -122,31 +130,31 @@
   flex: 1;
   resize: none;
   padding: 12px 15px;
-  border-radius: 20px;
+  border-radius: 50px;
   border: none;
   font-size: 1.1rem;
-  background-color: #f0f1f1c3;
-  box-shadow: 0px 0px 2px 0px black inset;
+  background-color: #f0f1f1;
   color: black;
   outline: none;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  height: 90px;
 }
 
 /* Send button */
 .send-btn {
   margin-left: 15px;
-  padding: 12px 25px;
+  padding: 12px 20px;
   background-color: #141516;
-  background: linear-gradient(45deg,rgb(7, 39, 100),rgba(0, 0, 0, 0.659));
+  background: linear-gradient(45deg,rgb(7, 77, 207),rgb(0, 0, 0));
   border: 2px solid whitesmoke;
-  border-radius: 15px;
-  color: rgb(147, 191, 200);
+  border-radius: 35px;
+  color: rgb(215, 225, 227);
   font-weight: 600;
   font-size: 1rem;
   cursor: pointer;
   transition: background-color 0.5s ease;
   height: max-content;
+  position: relative;
+  left: 3%;
 }
 
 /* Animations */
@@ -176,8 +184,14 @@
 }
 
 @media (max-width: 600px) {
+  .chat-input-area{
+    padding: 0;
+    gap: 0;
+    height: 50px;
+  }
     .chat-input{
-      height: 130%;
+      height: 100%;
+      width: 80%;
     }
     .chat-container{
       height: 100svh;
@@ -186,7 +200,8 @@
       padding-bottom: 2em;
     }
     .send-btn{
-      background: black;
+      position: static;
+      margin: 0;
       border-radius: 35px;
     }
 }
