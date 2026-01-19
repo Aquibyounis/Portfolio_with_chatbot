@@ -6,6 +6,7 @@ import Certificates from "./pages/Certificates/Certificates";
 import Ai from "./pages/AI/Ai";
 import Projects from "./pages/Projects/Projects";
 import LiquidLoader from "../src/Components/Load/LiquidLoader";
+import Hackathons from "./Components/Hackathons/Hackathons";
 import "./App.css";
 import "@fortawesome/fontawesome-free/css/all.min.css";
 
@@ -33,6 +34,7 @@ function App() {
           <Route path="/certifications" element={<Certificates />} />
           <Route path="/projects" element={<Projects />} />
           <Route path="/assistant" element={<Ai />} />
+          <Route path="/hackathons" element={<Hackathons />} />
         </Routes>
       </BrowserRouter>
     </div>

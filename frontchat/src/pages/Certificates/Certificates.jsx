@@ -1,119 +1,255 @@
-import React, { useState } from "react";
-import { motion } from "framer-motion";
-import "./Certificates.css";
+import React, { useState, useEffect, useRef } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
+import './Certificates.css';
 
-import cer1 from "../../assets/c1.png";
-import cer2 from "../../assets/c2.png";
-import cer3 from "../../assets/c3.png";
-import cer4 from "../../assets/c4.png";
-import cer5 from "../../assets/c5.png";
-import cer6 from "../../assets/c6.png";
-import cer7 from "../../assets/c7.jpg";
+import cer1 from '../../assets/c1.png';
+import cer2 from '../../assets/c2.png';
+import cer3 from '../../assets/c3.png';
+import cer4 from '../../assets/c4.png';
+import cer5 from '../../assets/c5.png';
+import cer6 from '../../assets/c6.png';
+import cer7 from '../../assets/c7.jpg';
 
-// Animation variant for scroll trigger
-const sectionVariant = {
-  hidden: { opacity: 0, scale: 0.85, y: 40 },
-  visible: {
-    opacity: 1,
-    scale: 1,
-    y: 0,
-    transition: { duration: 0.6, ease: [0.22, 1, 0.36, 1] },
-  },
-};
-
-// Reusable component
-const CertificateCard = ({ img, alt, desc, direction }) => (
-  <motion.div
-    className={direction === "left" ? "cer-left" : "cer-right"}
-    variants={sectionVariant}
-    initial="hidden"
-    whileInView="visible"
-    viewport={{ amount: 0.2 }}
-  >
-    <div className="l-left">
-      <img src={img} alt={alt} />
-    </div>
-    <div className="l-right">
-      <p dangerouslySetInnerHTML={{ __html: desc }} />
-    </div>
-  </motion.div>
-);
-
-// Data array with your original content
+// All certificates and badges merged into single flow
 const certificateData = [
   {
-    img: cer6,
-    alt: "Oracle Generative AI",
-    desc: `Completed <strong style="color: yellow">Oracle GEN AI </strong> certification. It wasn't as easy thing to accomplish, Finally got a grip in <strong style="color: aqua">LLM and AI along with VectorDB and RAG</strong>`,
-    direction: "right",
-    type: "cer",
+    id: 1,
+    title: 'Oracle Generative AI',
+    image: cer6,
+    description:
+      'Completed Oracle GEN AI certification. Finally got a grip in LLM and AI along with VectorDB and RAG. This certification validated my expertise in modern AI technologies and cloud-based generative AI solutions.',
   },
   {
-    img: cer1,
-    alt: "MERN Certificate",
-    desc: `Completed <strong style="color: yellow">MERN</strong> full stack course of duration 2 months. It wasn't as easy as seen now, been through highs and lows frequently and complete mastering over only single topic doesn't work in modern world of <strong style="color: aqua">AI</strong> and competition. But hoping this will be of good USE`,
-    direction: "left",
-    type: "cer",
+    id: 2,
+    title: 'MERN Full Stack',
+    image: cer1,
+    description:
+      'Completed MERN full stack course of duration 2 months. Been through highs and lows frequently. Complete mastering over multiple topics is essential in the modern world of AI and competition.',
   },
   {
-    img: cer2,
-    alt: "MongoDB Certificate",
-    desc: `A self-paced Learning path! directly connected to <strong style="color: yellow">MongoDB</strong> website, which helped in mastering my skills in MongoDB. Even though this is starting of my DB route, Still got a long way to go and learn new Emerging DataBases <strong style="color: aqua">(VectorDB)</strong>.`,
-    direction: "right",
-    type: "cer",
+    id: 3,
+    title: 'MongoDB Certified',
+    image: cer2,
+    description:
+      'A self-paced learning path directly connected to MongoDB website. Mastered skills in MongoDB including aggregations, indexing, and schema design. Starting of my database learning journey.',
   },
   {
-    img: cer3,
-    alt: "Team Project Certificate",
-    desc: `My <strong style="color: cyan">1st ever Team</strong> Project on real life bases. Which helped in understanding how team management works and how to split the work between respective interests and all. I <strong style="color: yellow">collaborated</strong> with other campus students and made this. Felt 100% satisfied after completing website, which helped me in making my own <strong style="color: red">websites</strong>.`,
-    direction: "left",
-    type: "cer",
+    id: 4,
+    title: 'Team Project Lead',
+    image: cer3,
+    description:
+      'My first ever team project on real-life basis. Learned team management, work distribution, and collaboration with other campus students. Felt 100% satisfied after completing the website.',
   },
   {
-    img: cer4,
-    alt: "AWS Badge",
-    desc: `<strong style="color: cyan">AWS</strong> Cloud Architecture badge. Completed the <strong style="color: yellow">AWS cloud LAB </strong>and got this badge after completing the Hands On lab with real time experience, You can verify this badge by clicking here <strong style="color: red">websites</strong>.`,
-    direction: "right",
-    type: "badge",
+    id: 5,
+    title: 'AWS Cloud Architecture',
+    image: cer4,
+    description:
+      'AWS Cloud Architecture badge. Completed the AWS cloud LAB with real-time hands-on experience in cloud infrastructure, scalability patterns, and best practices.',
   },
   {
-    img: cer7,
-    alt: "GENAI BADGE",
-    desc: `Completed <strong style="color: yellow">Oracle GEN AI</strong> course of self based learning path. Got experince in hands on lab for <strong style="color: aqua">RAG, VectorDB and also cloud integration of Oracle with Models</strong>.`,
-    direction: "left",
-    type: "badge",
+    id: 6,
+    title: 'Oracle GenAI Badge',
+    image: cer7,
+    description:
+      'Completed Oracle GEN AI course of self-based learning path. Gained experience in hands-on lab for RAG, VectorDB, and cloud integration of Oracle with AI models.',
   },
   {
-    img: cer5,
-    alt: "AWS Foundations Badge",
-    desc: `<strong style="color: cyan">Aws</strong> Cloud Foundations badge which helped me in gaining real time experience with <strong style="color: yellow">AWS LABS such as EC2, S3, VPC, IAM roles ,users, policies, Databases like RDS, Aurora and also Serverless deployments with Lambda</strong>`,
-    direction: "right",
-    type: "badge",
+    id: 7,
+    title: 'AWS Foundations',
+    image: cer5,
+    description:
+      'AWS Cloud Foundations badge with real-time experience in AWS Labs including EC2, S3, VPC, IAM roles, users, policies, databases like RDS, Aurora, and serverless deployments with Lambda.',
   },
 ];
 
-const Certificates = () => {
-  const [cer, setCer] = useState("cer");
-  const filteredData = certificateData.filter((item) => item.type === cer);
+// Certificate Card Component
+const CertificateCard = ({ certificate, index, onCardClick }) => {
+  return (
+    <motion.div
+      className="cert-card"
+      initial={{ opacity: 0, scale: 0.8 }}
+      animate={{ opacity: 1, scale: 1 }}
+      transition={{ duration: 0.4, delay: index * 0.08 }}
+      whileHover={{ scale: 1.03, y: -5 }}
+      onClick={() => onCardClick(certificate)}
+    >
+      <div className="cert-card-glow" />
+      <div className="cert-card-content">
+        <div className="cert-image-container">
+          <img src={certificate.image} alt={certificate.title} className="cert-image" />
+        </div>
+        <h3 className="cert-title">{certificate.title}</h3>
+        <p className="cert-description">{certificate.description.substring(0, 60)}...</p>
+      </div>
+      {/* Rhombus Node */}
+      <div className="cert-rhombus" />
+    </motion.div>
+  );
+};
+
+// Modal Component
+const CertificateModal = ({ certificate, onClose }) => {
+  if (!certificate) return null;
 
   return (
-    <div className="certificates">
-      <div className="inner_certificates">
-        <div className="sidenav">
-          <h2 onClick={() => setCer("cer")} className={cer==="cer" ? "y":"n"}>Certificates</h2>
-          <h2 onClick={() => setCer("badge")}  className={cer==="badge" ? "y":"n"}>Badges</h2>
+    <motion.div
+      className="cert-modal-overlay"
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
+      onClick={onClose}
+    >
+      <motion.div
+        className="cert-modal-content"
+        initial={{ scale: 0.8, opacity: 0, y: 50 }}
+        animate={{ scale: 1, opacity: 1, y: 0 }}
+        exit={{ scale: 0.8, opacity: 0, y: 50 }}
+        transition={{ type: 'spring', damping: 25, stiffness: 300 }}
+        onClick={(e) => e.stopPropagation()}
+      >
+        <button className="cert-modal-close" onClick={onClose}>
+          <span>×</span>
+        </button>
+        <div className="cert-modal-image-container">
+          <img src={certificate.image} alt={certificate.title} className="cert-modal-image" />
         </div>
+        <div className="cert-modal-text">
+          <h2 className="cert-modal-title">{certificate.title}</h2>
+          <p className="cert-modal-description">{certificate.description}</p>
+        </div>
+      </motion.div>
+    </motion.div>
+  );
+};
 
-        {filteredData.map((item, index) => (
-          <CertificateCard
-            key={index}
-            img={item.img}
-            alt={item.alt}
-            desc={item.desc}
-            direction={item.direction}
-          />
+const Certificates = () => {
+  const [selectedCertificate, setSelectedCertificate] = useState(null);
+  const [columns, setColumns] = useState(3); // Default 3 columns
+  const containerRef = useRef(null);
+
+  // Calculate columns based on viewport width
+  useEffect(() => {
+    const updateColumns = () => {
+      const width = window.innerWidth;
+      if (width <= 500) setColumns(1);
+      else if (width <= 768) setColumns(2);
+      else setColumns(3); // Default 3
+    };
+
+    updateColumns();
+    window.addEventListener('resize', updateColumns);
+    return () => window.removeEventListener('resize', updateColumns);
+  }, []);
+
+  // Handle keyboard escape to close modal
+  useEffect(() => {
+    const handleKeyDown = (e) => {
+      if (e.key === 'Escape' && selectedCertificate) {
+        setSelectedCertificate(null);
+      }
+    };
+    window.addEventListener('keydown', handleKeyDown);
+    return () => window.removeEventListener('keydown', handleKeyDown);
+  }, [selectedCertificate]);
+
+  /*
+   * Mirror S Pattern:
+   * Row 1 (L→R): [1] → [2] → [3]
+   *                          ↓
+   * Row 2 (R→L): [6] ← [5] ← [4]
+   *               ↓
+   * Row 3 (L→R): [7] → [8] → [9]
+   */
+
+  const buildRows = () => {
+    const rows = [];
+    let index = 0;
+    let rowIndex = 0;
+
+    while (index < certificateData.length) {
+      const isRightToLeft = rowIndex % 2 === 1;
+      const rowItems = [];
+
+      for (let i = 0; i < columns && index < certificateData.length; i++) {
+        rowItems.push({
+          ...certificateData[index],
+          originalIndex: index,
+        });
+        index++;
+      }
+
+      rows.push({
+        items: isRightToLeft ? [...rowItems].reverse() : rowItems,
+        isRightToLeft,
+        isLastRow: index >= certificateData.length,
+      });
+
+      rowIndex++;
+    }
+
+    return rows;
+  };
+
+  const rows = buildRows();
+
+  return (
+    <div className="certificates-container" ref={containerRef}>
+      {/* Background Effects */}
+      <div className="cert-bg-gradient" />
+      <div className="cert-bg-grid" />
+
+      {/* Section Header */}
+      <motion.div
+        className="cert-section-header"
+        initial={{ opacity: 0, y: -30 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8 }}
+      >
+        <h1 className="cert-section-title">Certifications</h1>
+        <p className="cert-section-subtitle">Credentials that validate my expertise</p>
+      </motion.div>
+
+      {/* Snake Layout */}
+      <div className="cert-snake-wrapper" style={{ '--columns': columns }}>
+        {rows.map((row, rowIdx) => (
+          <React.Fragment key={`row-${rowIdx}`}>
+            {/* Row of cards */}
+            <div className={`cert-row ${row.isRightToLeft ? 'row-rtl' : 'row-ltr'}`}>
+              {row.items.map((cert, cardIdx) => (
+                <div className="cert-card-wrapper" key={cert.id}>
+                  <CertificateCard
+                    certificate={cert}
+                    index={cert.originalIndex}
+                    onCardClick={setSelectedCertificate}
+                  />
+                  {/* Horizontal connecting line (between cards in same row) */}
+                  {cardIdx < row.items.length - 1 && (
+                    <div className="connect-line connect-horizontal" />
+                  )}
+                </div>
+              ))}
+            </div>
+
+            {/* Vertical connector between rows */}
+            {!row.isLastRow && (
+              <div className={`row-connector ${row.isRightToLeft ? 'connector-left' : 'connector-right'}`}>
+                <div className="connect-line connect-vertical" />
+              </div>
+            )}
+          </React.Fragment>
         ))}
       </div>
+
+      {/* Modal */}
+      <AnimatePresence>
+        {selectedCertificate && (
+          <CertificateModal
+            certificate={selectedCertificate}
+            onClose={() => setSelectedCertificate(null)}
+          />
+        )}
+      </AnimatePresence>
     </div>
   );
 };

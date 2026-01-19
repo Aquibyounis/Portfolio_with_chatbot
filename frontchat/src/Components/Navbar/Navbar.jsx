@@ -80,6 +80,10 @@ const Navbar = () => {
                     Projects <i className="fa-solid fa-laptop-code"></i>
                 </NavLink>
 
+                <NavLink className={({ isActive }) => isActive ? 'Link active' : 'Link'} to="/hackathons">
+                    Hackathons <i class="fa-solid fa-cube"></i>
+                </NavLink>
+
                 <NavLink className={({ isActive }) => isActive ? 'Link active' : 'Link'} to="/assistant">
                     Peanut <i style={{ fontSize: "0.8em" }} className="fa-solid fa-chevron-down"></i>
                 </NavLink>

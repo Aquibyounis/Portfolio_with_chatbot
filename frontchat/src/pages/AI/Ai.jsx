@@ -93,42 +93,46 @@ const Ai = () => {
   };
 
   return (
-    <div className="chat-container">
-      <div className="chat-header">Peanut!</div>
+    <div className="ai-page-wrapper">
+      <div className="ai-bg-gradient" />
+      <div className="ai-bg-grid" />
+      <div className="chat-container">
+        <div className="chat-header">Peanut!</div>
 
-      <div className="chat-messages">
-        {messages.map((msg, i) => (
-          <div
-            key={i}
-            className={`chat-message ${msg.sender === "user" ? "user" : "bot"}`}
-          >
-            {msg.text}
-          </div>
-        ))}
+        <div className="chat-messages">
+          {messages.map((msg, i) => (
+            <div
+              key={i}
+              className={`chat-message ${msg.sender === "user" ? "user" : "bot"}`}
+            >
+              {msg.text}
+            </div>
+          ))}
 
-        {isTyping && (
-          <div className="chat-message bot typing">
-            <span className="typing-dot"></span>
-            <span className="typing-dot"></span>
-            <span className="typing-dot"></span>
-          </div>
-        )}
+          {isTyping && (
+            <div className="chat-message bot typing">
+              <span className="typing-dot"></span>
+              <span className="typing-dot"></span>
+              <span className="typing-dot"></span>
+            </div>
+          )}
 
-        <div ref={messagesEndRef} />
-      </div>
+          <div ref={messagesEndRef} />
+        </div>
 
-      <div className="chat-input-area">
-        <textarea
-          className="chat-input"
-          rows={1}
-          placeholder="Ask me anything..."
-          value={input}
-          onChange={(e) => setInput(e.target.value)}
-          onKeyDown={handleKeyDown}
-        />
-        <button className="send-btn" onClick={sendMessage}>
-          <i class="fa-solid fa-arrow-right"></i>
-        </button>
+        <div className="chat-input-area">
+          <textarea
+            className="chat-input"
+            rows={1}
+            placeholder="Ask me anything..."
+            value={input}
+            onChange={(e) => setInput(e.target.value)}
+            onKeyDown={handleKeyDown}
+          />
+          <button className="send-btn" onClick={sendMessage}>
+            <i class="fa-solid fa-arrow-right"></i>
+          </button>
+        </div>
       </div>
     </div>
   );

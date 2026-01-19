@@ -87,7 +87,7 @@ function SortableItem({ project }) {
   const techList = project.tech.split(',').map(t => t.trim());
 
   return (
-    <div className="project-card"  ref={setNodeRef} style={style} {...attributes} {...listeners}>
+    <div className="project-card" ref={setNodeRef} style={style} {...attributes} {...listeners}>
       <i className="fa-solid fa-grip-vertical dots"></i>
       <h3 className="project-title neon-text">{project.title}</h3>
       <p className="project-desc">{project.description}</p>
@@ -98,7 +98,7 @@ function SortableItem({ project }) {
         ))}
       </div>
 
-      <p className="project-role"><i class="fa-solid fa-comments" style={{color:"cyan"}}></i> {project.role}</p>
+      <p className="project-role"><i class="fa-solid fa-comments" style={{ color: "cyan" }}></i> {project.role}</p>
 
       {project.link && (
         <a href={project.link} target="_blank" rel="noopener noreferrer" className="project-link">
@@ -127,6 +127,7 @@ const Projects = () => {
   return (
     <section className="projects-section" id="projects">
       <h2 className="section-title">My Projects</h2>
+      <h3 className='sub-section-title'>AI + MERN + N8N + Agentic + Multi Agentic</h3>
 
       <div className="symbol">
         {symbol === "FULL" ? (
