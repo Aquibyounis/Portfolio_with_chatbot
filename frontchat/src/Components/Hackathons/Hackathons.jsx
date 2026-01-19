@@ -7,46 +7,11 @@ import hack_1_img from '../../assets/Hack_1_img.png';
 const hackathonData = [
   {
     id: 1,
-    title: 'HackForge 2024',
+    title: 'AI Hackathon 2026',
     image: hack_1_img,
     description:
-      'Won first place at HackForge 2024 by building an AI-powered code review assistant. The project leveraged GPT-4 for intelligent suggestions and real-time collaboration features. Our team of four worked 36 hours straight to deliver a polished MVP that impressed the judges with its practical applications for development teams.',
-  },
-  {
-    id: 2,
-    title: 'DevSprint Mumbai',
-    image: hack_1_img,
-    description:
-      'Developed a blockchain-based supply chain tracking system during DevSprint Mumbai. Implemented smart contracts on Ethereum for transparent logistics monitoring. Received special mention for innovative use of decentralized technology in solving real-world supply chain challenges.',
-  },
-  {
-    id: 3,
-    title: 'CodeStorm Nationals',
-    image: hack_1_img,
-    description:
-      'Built a real-time disaster response platform at CodeStorm Nationals. Integrated satellite imagery APIs with ML models for damage assessment. The solution enabled emergency responders to prioritize affected areas efficiently during natural disasters.',
-  },
-  {
-    id: 4,
-    title: 'InnoHack Bangalore',
-    image: hack_1_img,
-    description:
-      'Created an AR-based educational tool for medical students at InnoHack Bangalore. Used Unity and Vuforia to visualize complex anatomical structures in 3D. The project demonstrated how immersive technology can revolutionize medical education.',
-  },
-  {
-    id: 5,
-    title: 'TechFusion Delhi',
-    image: hack_1_img,
-    description:
-      'Engineered a predictive maintenance system for industrial IoT at TechFusion Delhi. Combined sensor data analytics with machine learning to forecast equipment failures. Runner-up in the Industrial Innovation category.',
-  },
-  {
-    id: 6,
-    title: 'CloudHack 2023',
-    image: hack_1_img,
-    description:
-      'Designed a serverless microservices architecture at CloudHack 2023. Demonstrated zero-downtime deployments using AWS Lambda and API Gateway. Won Best Cloud Architecture award for scalable and cost-effective design patterns.',
-  },
+      'Solo AI Hackathon conducted by collaboration of Supervity AI company and PythonGURU, Made it to top 15 but was not selected for top 10. Built an AI call analyser for medical field insights generator and next step adviser. Integrated with Telegram using polling for real time updates in N8N.',
+  }
 ];
 
 // Hackathon Card Component
