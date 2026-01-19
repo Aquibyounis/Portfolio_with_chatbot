@@ -22,8 +22,13 @@ body {
 }
 
 @keyframes fadein {
-  from { opacity: 0; }
-  to { opacity: 1; }
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
 }
 
 .section-title {
@@ -37,6 +42,7 @@ body {
   left: 50%;
   transform: translate(-50%);
 }
+
 .section-title::before {
   content: '🪐 ';
   -webkit-text-fill-color: #00fff7;
@@ -53,7 +59,7 @@ body {
 
 .projects-grid2 {
   display: grid;
-  grid-template-columns:1fr;
+  grid-template-columns: 1fr;
   gap: 2rem;
   max-width: 70svw;
   margin: 0 auto;
@@ -73,10 +79,12 @@ body {
   font-size: 1.3em;
   cursor: pointer;
 }
+
 .symbol h5 {
   margin: 0;
   padding: 0;
 }
+
 .dots {
   position: absolute;
   left: 2%;
@@ -92,7 +100,7 @@ body {
 }
 
 .project-card {
-  background: radial-gradient(#161f31,#313d56);
+  background: radial-gradient(#161f31, #313d56);
   border-radius: 1rem;
   padding: 2rem;
   position: relative;
@@ -121,8 +129,13 @@ body {
 }
 
 @keyframes rotate {
-  0% { transform: rotate(0deg); }
-  100% { transform: rotate(360deg); }
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
 }
 
 .project-card:hover {
@@ -195,6 +208,7 @@ body {
   .projects-grid {
     grid-template-columns: 1fr;
   }
+
   .projects-section {
     padding-top: 3rem;
   }
@@ -205,28 +219,40 @@ body {
     padding: 2rem 1rem;
     margin-bottom: 100px;
   }
+
   .section-title {
     font-size: 1.8rem;
     margin-bottom: 2rem;
   }
+
   .symbol {
     font-size: 1em;
     margin-right: 1em;
   }
+
   .project-card {
     padding: 1.5rem;
     min-height: 30svh;
   }
+
   .project-card h3 {
     font-size: 1.2rem;
   }
+
   .project-desc {
     font-size: 0.9rem;
   }
+
   .tech-pill {
     font-size: 0.75rem;
   }
+
   .project-link {
     font-size: 0.9rem;
+  }
+
+  /* Push content down for Dynamic Island */
+  .projects-section {
+    padding-top: 80px;
   }
 }

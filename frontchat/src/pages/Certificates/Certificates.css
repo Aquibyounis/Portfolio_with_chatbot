@@ -10,7 +10,8 @@
   backdrop-filter: blur(100px);
   background-position: center;
 }
-.sidenav{
+
+.sidenav {
   width: 90%;
   border-bottom: 2px solid white;
   display: flex;
@@ -20,17 +21,20 @@
   padding-bottom: 20px;
   padding-left: 5%;
 }
-.sidenav h2{
+
+.sidenav h2 {
   cursor: pointer;
   transition-duration: 0.5s;
-  
+
 }
-.y{
+
+.y {
   scale: 1.2;
-  background: linear-gradient(45deg,rgb(7, 143, 227),cyan);
+  background: linear-gradient(45deg, rgb(7, 143, 227), cyan);
   -webkit-text-fill-color: transparent;
   -webkit-background-clip: text;
 }
+
 .inner_certificates {
   padding: 1.2em;
   width: 100%;
@@ -92,6 +96,7 @@
 /* Responsive Design */
 
 @media (max-width: 1024px) {
+
   .cer-left,
   .cer-right {
     flex-direction: column;
@@ -135,13 +140,20 @@
     font-size: 0.95em;
     width: 95%;
   }
-  .sidenav{
+
+  .sidenav {
     flex-direction: column;
     gap: 5%;
     align-items: end;
   }
-  .sidenav h2:hover{
+
+  .sidenav h2:hover {
     scale: 1;
     width: fit-content;
+  }
+
+  /* Push content down for Dynamic Island */
+  .certificates {
+    padding-top: 80px;
   }
 }
