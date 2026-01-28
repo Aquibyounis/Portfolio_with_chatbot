@@ -78,7 +78,7 @@ const MainBar = () => {
 
                     <motion.a
                         className='resume'
-                        href='https://drive.google.com/file/d/1KXOsAB--H06BRtEtxJWcm52W0fIdUJhw/view?usp=drive_link'
+                        href='https://drive.google.com/file/d/1k1H6N5pbJXbr9RTMFy_rVLRjyPheEyR1/view?usp=sharing'
                         custom={3}
                         variants={textVariants}
                         whileHover={{ scale: 1.05 }}

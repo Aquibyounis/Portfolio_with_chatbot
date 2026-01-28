@@ -41,14 +41,11 @@
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   box-sizing: border-box;
   border-radius: 20px;
-  box-shadow: 0 0 15px rgba(65, 149, 195, 0.6) inset;
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  background: rgba(10, 20, 35, 0.8);
   backdrop-filter: blur(20px);
-  border: 1px solid rgba(0, 200, 255, 0.15);
   z-index: 1;
 }
 
@@ -155,7 +152,7 @@
   padding: 15px 30px;
   align-items: center;
   justify-content: space-between;
-  background-color: rgba(20, 30, 45, 0.9);
+  background-color: rgba(80, 83, 88, 0.9);
   border: 1px solid rgba(0, 200, 255, 0.2);
   border-radius: 50px;
   width: 90%;
@@ -233,7 +230,6 @@
 @media (max-width: 768px) {
   .chat-container {
     width: 100vw;
-    padding-top: 80px;
     height: 95svh;
   }
 }
@@ -263,8 +259,4 @@
     border-radius: 35px;
   }
 
-  /* Push content down for Dynamic Island */
-  .chat-container {
-    top: calc(50% + 35px);
-  }
 }

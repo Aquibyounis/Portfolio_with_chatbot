@@ -9,7 +9,7 @@ const Skills = () => {
         
         {/* AI & ML First */}
         <span className='tech_box'>
-          <h2>AI</h2>
+          <h2>AI <i class="fa-solid fa-laptop-code"></i></h2>
           <div className="com">
             <p className='com_p'>Python</p>
             <p className='com_p'>NumPy</p>
@@ -21,23 +21,22 @@ const Skills = () => {
         </span>
 
         <span className='tech_box'>
-          <h2>AGENTIC AI</h2>
+          <h2>AGENTIC AI <i class="fa-solid fa-timeline"></i></h2>
           <div className="com">
             <p className='com_p'>n8n</p>
             <p className='com_p'>RAG</p>
-            <p className='com_p'>Multi Agentic RAG</p>
           </div>
         </span>
 
         {/* AI & ML First */}
         <span className='tech_box'>
-          <h2>LLM and GenAI</h2>
+          <h2>LLM and GenAI <i class="fa-solid fa-brain"></i></h2>
           <div className="com">
             <p className='com_p'>LangChain</p>
             <p className='com_p'>VectorDB</p>
             <p className='com_p'>Chroma</p>
             <p className='com_p'>FAISS</p>
-            <p className='com_p'>NLP</p>
+            <p className='com_p'>Ollama</p>
           </div>
         </span>
 
@@ -52,12 +51,14 @@ const Skills = () => {
             <p className='com_p'>Node.js</p>
             <p className='com_p'>HTML</p>
             <p className='com_p'>CSS</p>
+            <p className='com_p'>Rest API</p>
+            <p className='com_p'>FastAPI</p>
           </div>
         </span>
 
         {/* Programming Languages */}
         <span className='tech_box'>
-          <h2>Languages</h2>
+          <h2>Languages <i class="fa-solid fa-terminal"></i></h2>
           <div className="com">
             <p className='com_p'>Python</p>
             <p className='com_p'>Java</p>
@@ -68,7 +69,7 @@ const Skills = () => {
         
         {/* Cloud & Ops */}
         <span className='tech_box'>
-          <h2>DevOps & Cloud</h2>
+          <h2>DevOps & Cloud <i class="fa-solid fa-cloud"></i></h2>
           <div className="com">
             <p className='com_p'>AWS</p>
             <p className='com_p'>EC2</p>
@@ -79,7 +80,7 @@ const Skills = () => {
 
         {/* Tools */}
         <span className='tech_box'>
-          <h2>Tools</h2>
+          <h2>Tools <i class="fa-solid fa-gear"></i></h2>
           <div className="com">
             <p className='com_p'>Jupyter Notebook</p>
             <p className='com_p'>Git</p>

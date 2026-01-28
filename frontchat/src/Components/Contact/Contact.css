@@ -55,14 +55,14 @@
   font-size: 1.5em;
   font-weight: 800;
   text-align: center;
-  font-family: 'Lucida Sans', sans-serif;
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   
 }
 .c_ul a,.right_contact a{
   text-decoration: none;
   color: black;
   font-family:'Courier New', Courier, monospace;
-  background: linear-gradient(12deg,rgb(0, 149, 255),black);
+  background: linear-gradient(12deg,rgb(13, 77, 124),black);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
