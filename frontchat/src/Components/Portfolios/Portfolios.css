@@ -6,34 +6,61 @@
 
 .portfolio-section h2 {
   margin-bottom: 30px;
-  font-size: 2rem;
+  font-size: clamp(1.2rem, 3vw, 1.6rem);
   color: cyan;
 }
 
+/* layout */
 .portfolio-links {
   display: flex;
   justify-content: center;
-  gap: 20px;
   flex-wrap: wrap;
 }
 
+/* card */
 .portfolio-card {
-  background-color: #111;
-  color: white;
-  padding: 20px 30px;
-  border-radius: 12px;
-  text-decoration: none;
-  box-shadow: 0 0 10px cyan;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  width: 100%;
+  max-width: 420px;
+  border-radius: 14px;
+  box-shadow: 0 0 20px 0px rgb(9, 56, 122);
+  overflow: hidden;
+  transition: box-shadow 0.3s ease;
 }
 
 .portfolio-card:hover {
-  transform: scale(1.05);
-  box-shadow: 0 0 20px cyan;
+  box-shadow: 0 0 22px rgb(0, 145, 255);
 }
 
-@media (max-width:600px) {
-  .portfolio-section{
-    margin-bottom: 50px;
+/* iframe magic */
+.iframe-wrapper {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9; /* keeps perfect scaling */
+  overflow: hidden;
+  background: #000;
+}
+
+.iframe-wrapper iframe {
+  width: 1200px;     /* desktop width */
+  height: 675px;
+  border: none;
+
+  /* scale DOWN internally */
+  transform: scale(0.35);
+  transform-origin: top left;
+
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+/* mobile tuning */
+@media (max-width: 600px) {
+  .portfolio-card {
+    max-width: 100%;
+  }
+
+  .iframe-wrapper iframe {
+    transform: scale(0.28);
   }
 }

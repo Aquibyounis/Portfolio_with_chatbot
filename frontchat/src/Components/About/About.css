@@ -2,10 +2,9 @@
   max-width: 80%;
   margin: 80px auto;
   padding: 40px;
-  background-color: #181f25;
   color: #e0e0e0;
   border-radius: 16px;
-  box-shadow: 0 0 30px rgba(0, 255, 255, 0.1);
+  box-shadow: 0 0 30px rgba(0, 255, 255, 0.1) inset;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   transition: transform 0.3s ease;
   box-sizing: border-box;

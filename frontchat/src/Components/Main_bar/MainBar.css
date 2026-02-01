@@ -1,7 +1,7 @@
 /* MainBar.css */
 
 .mainbar {
-  background: url("../../assets/back2.png");
+  /* background: url("../../assets/back2.png"); */
   height: 100svh;
   width: 100%;
   background-position: center;
@@ -272,14 +272,15 @@
     padding-bottom: 1rem;
   }
 
+
   .middle {
     order: 1;
     width: 100%;
     padding: 1rem;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    text-align: center;
+    align-items: end;
+    text-align: end;
     height: 50svh;
   }
 

@@ -1,3 +1,7 @@
+/* =========================
+   MAIN CONTAINER
+========================= */
+
 .edu-container {
   min-height: 50vh;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -6,7 +10,8 @@
   position: relative;
 }
 
-/* Purple vertical line (scroll activated) */
+/* ===== Vertical Timeline Line ===== */
+
 .edu-container::before {
   content: '';
   position: absolute;
@@ -14,22 +19,25 @@
   top: 10%;
   height: 80%;
   width: 4px;
-  background: linear-gradient(180deg, #a020f0, #ff00ff);
+  background: linear-gradient(180deg, #9e6fbc, #008cff);
   opacity: 0;
   transform: scaleY(0);
-  transition: all 0.5s ease-in-out;
-  border-radius: 2px;
+  transition: opacity 0.5s ease, transform 0.5s ease;
+  border-radius: 6px;
+  filter: blur(2px);
 }
 
 .edu-container.active::before {
   opacity: 1;
   transform: scaleY(1);
-  box-shadow: 0 0 12px 4px #e100ff7c;
 }
+
+/* =========================
+   INNER FLEX LAYOUT
+========================= */
 
 .inner-container {
   color: #f5f5f5;
-  height: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -37,20 +45,34 @@
   position: relative;
 }
 
+/* =========================
+   CARDS
+========================= */
+
 .edu-card,
 .hobbies-card {
-  margin-bottom: 1%;
-  background: radial-gradient( #345b875b 10%, rgba(0, 0, 0, 0.372));
-  backdrop-filter: blur(50px);
-  height: fit-content;
-  padding: 0.5em;
+  position: relative;
   width: 40%;
+  padding: 1.2em;
   border-radius: 16px;
+
+  background: radial-gradient(#345b875b 10%, rgba(0, 0, 0, 0.372));
+  backdrop-filter: blur(40px);
+
   box-shadow: -10px 0px 10px -5px rgba(0, 255, 255, 0.315) inset;
-  transition: transform 0.3s ease;
   border-left: 5px solid #ff00ff;
+
+  transition: transform 0.3s ease;
 }
-.edu-card::after{
+
+.edu-card:hover,
+.hobbies-card:hover {
+  transform: translateY(-5px);
+}
+
+/* ===== Timeline Connectors ===== */
+
+.edu-card::after {
   content: '';
   position: absolute;
   right: -10%;
@@ -58,91 +80,140 @@
   height: 5px;
   width: 9%;
   border-radius: 50px;
-  box-shadow: 0 0 12px 4px #e100ff7c;
   background: linear-gradient(45deg, #a020f0, #ff00ff);
+  box-shadow: 0 0 12px 4px #e100ff7c;
 }
-.hobbies-card::before{
+
+.hobbies-card::before {
   content: '';
   position: absolute;
   left: -11%;
-  border-radius: 50px;
-  box-shadow: 0 0 12px 4px #e100ff7c;
   top: 50%;
   height: 5px;
   width: 9%;
+  border-radius: 50px;
   background: linear-gradient(45deg, #a020f0, #ff00ff);
+  box-shadow: 0 0 12px 4px #e100ff7c;
 }
-.edu-card:hover,
-.hobbies-card:hover {
-  transform: translateY(-5px);
-}
+
+/* =========================
+   HEADINGS
+========================= */
 
 .edu-card h2,
 .hobbies-card h2 {
   font-size: 1.8rem;
   margin-bottom: 1.2rem;
-  color: #ffffff;
   background: linear-gradient(45deg, rgb(5, 134, 220), white);
-  width: fit-content;
-  -webkit-text-fill-color: transparent;
   -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  width: fit-content;
 }
 
 .edu-section {
-  margin-bottom: 1.5rem;
+  margin-bottom: 1.4rem;
 }
 
 .edu-section h3 {
-  margin-bottom: 0.5rem;
-  color: #e03fa2;
-  background: linear-gradient(45deg, #ff009d, rgb(240, 3, 240));
-  width: fit-content;
+  margin-bottom: 0.4rem;
+  background: linear-gradient(85deg, #0008ff, rgb(240, 3, 149));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  width: fit-content;
 }
 
-.edu-section p {
-  margin: 0.3rem 0;
+/* =========================
+   EDUCATION TABLE (1px LINES)
+========================= */
+
+.edu-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 0.6rem;
 }
 
-.hobbies-card ul {
-  padding-left: 1.2rem;
+.edu-table tr {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.25);
 }
 
-.hobbies-card li {
-  margin-bottom: 0.8rem;
-  list-style-type: circle;
+.edu-table tr:last-child {
+  border-bottom: none;
+}
+
+.edu-table td {
+  padding: 0.5rem 0;
+  font-size: 0.95rem;
+  color: #f5f5f5;
+}
+
+.edu-table td:first-child {
+  width: 30%;
+  font-weight: 600;
+  color: #e0e0e0;
+}
+
+/* =========================
+   HOBBIES TABLE (1 COLUMN + LINES)
+========================= */
+
+.hobby-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.hobby-table tr {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.25);
+}
+
+.hobby-table tr:last-child {
+  border-bottom: none;
+}
+
+.hobby-table td {
+  padding: 0.9em 0.6em;
+  font-size: 0.95rem;
   line-height: 1.4;
+  color: #f5f5f5;
 }
 
-/* Responsive */
+/* =========================
+   RESPONSIVE
+========================= */
+
 @media (max-width: 600px) {
+
   .inner-container {
     flex-direction: column;
     align-items: center;
     padding: 1rem;
+    gap: 2rem;
   }
 
   .edu-card,
   .hobbies-card {
-    width: 90%;
+    width: 92%;
   }
-  .edu-card::after,.hobbies-card::before{
+
+  /* remove horizontal connectors */
+  .edu-card::after,
+  .hobbies-card::before {
     content: '';
-    height: 0px;
-    width: 0px;
+    width: 0;
+    height: 0;
     box-shadow: none;
   }
-  .edu-container::before{
-    content: '';
-    position: absolute;
+
+  /* move timeline to left */
+  .edu-container::before {
     left: 5%;
-    height: 80%;
+    right: auto;
+    height: 85%;
     width: 4px;
-    background: linear-gradient(180deg, #a020f0, #ff00ff);
-    opacity: 0;
-    transform: scaleY(0);
-    transition: all 0.5s ease-in-out;
     border-radius: 20px;
+  }
+
+  .edu-table td,
+  .hobby-table td {
+    font-size: 0.85rem;
   }
 }

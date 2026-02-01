@@ -178,7 +178,7 @@ const Home = () => {
         `}</style>
 
       {/* 1. The River Background Layer */}
-      <RiverBackground />
+      {/* <RiverBackground /> */}
 
       <MainBar />
 

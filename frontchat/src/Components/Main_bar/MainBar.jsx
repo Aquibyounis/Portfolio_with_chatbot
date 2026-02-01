@@ -76,7 +76,7 @@ const MainBar = () => {
                         Aspiring AI Engineer <i className="fa-solid fa-brain"></i>
                     </motion.h3>
 
-                    <motion.a
+                    <a
                         className='resume'
                         href='https://drive.google.com/file/d/1k1H6N5pbJXbr9RTMFy_rVLRjyPheEyR1/view?usp=sharing'
                         custom={3}
@@ -85,7 +85,7 @@ const MainBar = () => {
                         whileTap={{ scale: 0.95 }}
                     >
                         RESUME
-                    </motion.a>
+                    </a>
                 </motion.div>
 
                 <div className="right">
