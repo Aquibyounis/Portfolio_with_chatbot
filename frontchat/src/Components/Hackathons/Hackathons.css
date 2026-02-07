@@ -232,8 +232,8 @@
 /* Rhombus Node on each card */
 .hack-rhombus {
     position: absolute;
-    bottom: -10px;
-    left: 50%;
+    bottom: 10px;
+    left: 95%;
     transform: translateX(-50%) rotate(45deg);
     width: 14px;
     height: 14px;
@@ -243,6 +243,7 @@
         0 0 20px rgba(0, 255, 255, 0.5);
     animation: hack-pulse 2.5s ease-in-out infinite;
     z-index: 10;
+    border-radius: 50%;
 }
 
 @keyframes hack-pulse {

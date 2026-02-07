@@ -18,7 +18,6 @@
   display: flex;
   align-items: center;
   justify-content: space-evenly;
-  background: linear-gradient(rgba(0, 0, 0, 0.002), #030a17 100%);
   height: 100%;
   width: 100%;
   flex-wrap: wrap;

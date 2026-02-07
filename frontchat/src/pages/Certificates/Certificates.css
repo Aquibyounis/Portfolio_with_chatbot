@@ -232,7 +232,7 @@
 /* Rhombus Node on each card */
 .cert-rhombus {
   position: absolute;
-  bottom: -10px;
+  bottom: 10px;
   left: 50%;
   transform: translateX(-50%) rotate(45deg);
   width: 14px;
@@ -243,6 +243,7 @@
     0 0 20px rgba(0, 255, 255, 0.5);
   animation: cert-pulse 2.5s ease-in-out infinite;
   z-index: 10;
+  border-radius: 50%;
 }
 
 @keyframes cert-pulse {

@@ -21,6 +21,7 @@
     gap: 5%;
     backdrop-filter: blur(20px);
     box-shadow: 0px 0px 100px 0px #5f78a0;
+    border: 1px solid rgb(39, 48, 55);
 }
 .Link{
     display: flex;
