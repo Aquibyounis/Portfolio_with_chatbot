@@ -220,18 +220,13 @@
 
 @media (max-width: 770px) {
   .inner_main {
-    flex-direction: column-reverse;
+    display: flex;
     align-items: center;
-    justify-content: flex-start;
-    padding: 6rem 5rem;
+    justify-content: center;
+    flex-direction: column-reverse;
+    padding: 3rem 5rem;
   }
 
-  .middle,
-  .right {
-    width: 100%;
-    text-align: center;
-    align-items: center;
-  }
 
   .h1 {
     font-size: 2.5em;
@@ -247,10 +242,9 @@
 
   .img_p {
     scale: 1.1;
-    max-width: 200px;
+    max-width: 500px;
   }
 }
-
 @media (max-width: 600px) {
 
   .inner_main {
@@ -268,7 +262,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    padding-bottom: 1rem;
+    padding: 0;
   }
 
 

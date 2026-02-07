@@ -11,7 +11,8 @@
 .ul {
     position: relative;
     /* Essential for positioning the floating indicator */
-    width: 60%;
+    width: max-content;
+    padding: 0 10em 0 10em;
     height: 80%;
     list-style: none;
     display: flex;
@@ -71,12 +72,8 @@
 
 /* Responsive Styles */
 @media (max-width: 770px) {
-    .navbar {
-        scale: 1.23;
-    }
-
     .Link {
-        font-size: 1em;
+        font-size: 0.8em;
     }
 }
 
