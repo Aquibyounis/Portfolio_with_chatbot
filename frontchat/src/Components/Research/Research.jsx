@@ -16,9 +16,7 @@ const Research = () => {
                     {/* 2. Use the imported variable in the src attribute */}
                     <iframe 
                     className='paper' 
-                    src={crc598Pdf} 
-                    width="500px" 
-                    height="500px"
+                    src={crc598Pdf}
                     title="CRC 598 Paper" // Added title for accessibility
                     >
                         <p>This browser does not support PDFs. Please download the PDF to view it: <a href={crc598Pdf}>Download PDF</a>.</p>
