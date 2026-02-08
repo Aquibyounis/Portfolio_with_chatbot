@@ -11,18 +11,14 @@
 .ul {
     position: relative;
     /* Essential for positioning the floating indicator */
-    width: max-content;
-    padding: 0 10em 0 10em;
-    height: 80%;
+    width: 100%;
+    height: 100%;
     list-style: none;
     display: flex;
     align-items: center;
-    justify-content: center;
-    border-radius: 50px;
-    gap: 5%;
+    justify-content: space-evenly;
     backdrop-filter: blur(20px);
-    box-shadow: 0px 0px 100px 0px #5f78a0;
-    border: 1px solid rgb(39, 48, 55);
+    box-shadow: 0px 0px 100px -90px #5f78a0 inset;
 }
 .Link{
     display: flex;
@@ -38,7 +34,7 @@
     /* Slightly smaller than container for looks */
     top: 50%;
     transform: translateY(-50%);
-    background: linear-gradient(45deg, rgba(255, 255, 255, 0.523), rgb(27, 59, 85));
+    background: linear-gradient(45deg, rgba(97, 107, 115, 0.681), rgb(27, 59, 85));
     border-radius: 50px;
     z-index: 0;
     /* Behind the text */
@@ -46,7 +42,6 @@
     /* "Fluid" easing */
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
-
 .Link {
     text-shadow: 0px 0px 5px rgb(0, 0, 0);
     padding: 1%;

@@ -7,6 +7,7 @@ import Ai from "./pages/AI/Ai";
 import Projects from "./pages/Projects/Projects";
 import LiquidLoader from "../src/Components/Load/LiquidLoader";
 import Hackathons from "./Components/Hackathons/Hackathons";
+import Research from "./Components/Research/Research";
 import "./App.css";
 import "@fortawesome/fontawesome-free/css/all.min.css";
 
@@ -17,7 +18,7 @@ function App() {
     // show loader for 2 seconds
     const timer = setTimeout(() => {
       setLoading(false);
-    }, 3000);
+    }, 0);
     return () => clearTimeout(timer);
   }, []);
 
@@ -35,6 +36,7 @@ function App() {
           <Route path="/projects" element={<Projects />} />
           <Route path="/assistant" element={<Ai />} />
           <Route path="/hackathons" element={<Hackathons />} />
+          <Route path="/research" element={<Research />} />
         </Routes>
       </BrowserRouter>
     </div>
