@@ -86,7 +86,7 @@
         position: fixed;
         bottom: 15px;
         left: 50%;
-        transform: translateX(-40%);
+        transform: translateX(-50%);
         width: auto;
         height: auto;
         flex-direction: column;
@@ -198,7 +198,7 @@
 
     /* Expanded State - Dynamic Island Opens */
     .navbar.island-expanded .dynamic-island-pill {
-        padding: 1em 5em;
+        padding: 1em 4em;
         border-radius: 22px;
         box-shadow:
             0 8px 40px rgba(0, 0, 0, 0.6),
@@ -218,6 +218,8 @@
 
         /* Add staggered "jerk" motion effect */
         animation: liquid-expand 0.55s cubic-bezier(0.34, 1.56, 0.64, 1);
+        background: linear-gradient(45deg,rgb(10, 46, 77),rgb(39, 108, 108));
+        backdrop-filter: blur(100px);
     }
 
     @keyframes liquid-expand {
