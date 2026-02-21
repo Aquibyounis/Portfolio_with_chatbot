@@ -8,6 +8,7 @@ import Projects from "./pages/Projects/Projects";
 import LiquidLoader from "../src/Components/Load/LiquidLoader";
 import Hackathons from "./Components/Hackathons/Hackathons";
 import Research from "./Components/Research/Research";
+import CustomCursor from "./Components/CustomCursor/CustomCursor";
 import "./App.css";
 import "@fortawesome/fontawesome-free/css/all.min.css";
 
@@ -18,7 +19,7 @@ function App() {
     // show loader for 2 seconds
     const timer = setTimeout(() => {
       setLoading(false);
-    }, 3000);
+    }, 0);
     return () => clearTimeout(timer);
   }, []);
 
@@ -39,6 +40,7 @@ function App() {
           <Route path="/research" element={<Research />} />
         </Routes>
       </BrowserRouter>
+      <CustomCursor/>
     </div>
   );
 }

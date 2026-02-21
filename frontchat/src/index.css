@@ -33,3 +33,20 @@ body {
   --text-color: #f0f0f0;
   --font: 'Montserrat', sans-serif;
 }
+
+/* Hide system cursor everywhere */
+html, body, * {
+  cursor: none !important;
+  margin: 0;
+  padding: 0;
+}
+
+/* Prevent image selection */
+.custom-cursor {
+  pointer-events: none;
+  position: fixed;
+  width: 28px;
+  height: 28px;
+  z-index: 99999;
+  filter: drop-shadow(0 0 5px rgb(0, 0, 0));
+}

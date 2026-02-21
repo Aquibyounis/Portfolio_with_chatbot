@@ -61,32 +61,34 @@
 
 .bottom-m {
     width: min(95%, 80svw);
-    backdrop-filter: blur(100px);
+    /* backdrop-filter: blur(100px); */
     border-radius: 50px;
     font-size: 1.12em;
     text-align: center;
     display: grid;
     align-items: stretch;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2rem;
+    /* gap: 2rem; */
     padding: clamp(1rem, 4vw, 5em);
-    box-shadow: 0px 0px 50px -40px rgb(73, 97, 128);
 }
 
 .bottom-m p{
     color: gainsboro;
-    border: 1px solid grey;
     padding: 1em;
-    border-radius: 20px;
+    /* border-radius: 20px; */
     word-break: break-word;
     display: flex;
     align-items: center;
     justify-content: center;
+    /* border: 1vem solid white; */
+    height: 200px;
+    box-shadow: 0px 0px 2px -1px white;
 }
 
 .bottom-line{
-    background-color: rgba(87, 93, 97, 0.423);
+    background-color: rgba(87, 93, 97, 0.23);
 }
+
 
 .list-out{
     padding: 1em;

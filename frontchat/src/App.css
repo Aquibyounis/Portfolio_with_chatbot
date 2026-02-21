@@ -2,3 +2,9 @@
     color: rgba(196, 209, 218, 0.575);
     text-shadow: none;
 }
+
+img[alt="cursor"] {
+    filter: drop-shadow(0 0 10px white);
+    width: 28px;   /* or 32px */
+    height: 28px;
+}
