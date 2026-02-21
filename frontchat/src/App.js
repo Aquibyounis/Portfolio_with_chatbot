@@ -19,7 +19,7 @@ function App() {
     // show loader for 2 seconds
     const timer = setTimeout(() => {
       setLoading(false);
-    }, 0);
+    }, 3000);
     return () => clearTimeout(timer);
   }, []);
 
