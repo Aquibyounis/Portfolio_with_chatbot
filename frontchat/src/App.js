@@ -10,6 +10,8 @@ import Hackathons from "./Components/Hackathons/Hackathons";
 import Research from "./Components/Research/Research";
 import CustomCursor from "./Components/CustomCursor/CustomCursor";
 import "./App.css";
+import Snowfall from "react-snowfall";
+
 import "@fortawesome/fontawesome-free/css/all.min.css";
 
 function App() {
@@ -41,6 +43,15 @@ function App() {
         </Routes>
       </BrowserRouter>
       <CustomCursor/>
+      <Snowfall
+              style={{
+                position: "fixed",
+                width: "100vw",
+                height: "100vh",
+                zIndex: 0
+              }}
+              snowflakeCount={60}
+      />
     </div>
   );
 }
